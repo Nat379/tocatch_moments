@@ -634,7 +634,7 @@ body {
     font-size: 192px;
     line-height: 110%;
     color: var(--main-black);
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
     display: flex;
     text-align: center;
 }
@@ -715,17 +715,102 @@ textarea {
     border-bottom: 1px solid var(--dark-grey);
 }
 
+select{
+    color: var(--default-grey);
+        font-family: "Inter Tight", serif;
+        font-size: 16px;
+        line-height: 120%;
+}
+
 input::placeholder,
 select::placeholder,
 textarea::placeholder,
-select {
+select::placeholder {
     color: var(--default-grey);
     font-family: "Inter Tight", serif;
     font-size: 16px;
     line-height: 120%;
+    padding:  0 10px;
 }
 
 .submit-button{
     width: 99%;
-    margin: 26px 0 0 0;
+    margin: 30px 0 0 0;
+}
+
+.footer {
+    height: 507px;
+    background-color: var(--main-dark-grey);
+    display: flex;
+    flex-direction: row;
+    margin: 160px 0 0 0;
+    padding: 72px 63px;
+    justify-content: space-between;
+}
+
+.footer-content {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-content-contacts {
+    margin-top: 88px;
+    display: flex;
+    align-items: end;
+    color: var(--main-grey);
+    gap: 32px;
+}
+
+.footer-content-contacts .footer-notes {
+    margin-top: 58px;
+}
+
+.footer-content-contacts a {
+    color: var(--main-grey);
+    text-decoration: none;
+}
+
+.footer-content-contacts a:visited {
+    color: var(--main-grey);
+    text-decoration: none;
+}
+
+.contacts-tel {
+    font-family: "Inter Tight", serif;
+    font-size: 32px;
+    letter-spacing: -0.2px;
+    line-height: 100%;
+}
+
+.contacts-email {
+    font-family: "Inter Tight Regular", serif;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+}
+
+.footer-text {
+    font-family: "Inter Tight Regular", serif;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+}
+
+.media-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-notes {
+    font-family: "Inter Regular", serif;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 1.8px;
+    color: var(--main-grey);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 144px;
+    cursor: pointer;
 }
