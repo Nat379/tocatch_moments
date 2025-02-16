@@ -113,6 +113,7 @@ body {
     width: 100vw;
     background-color: var(--background);
     overflow-x: hidden;
+    display: flex;
 }
 
 .scroll-container {
@@ -120,59 +121,58 @@ body {
     background: var(--background);
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 17px;
+    justify-content: flex-start;
     overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-around;
+}
+
+.carousel {
+    display: flex;
+    gap: 17px;
+    flex-shrink: 0;
+    animation: scroll-horizontal 60s linear infinite;
+    margin: 0 9px;
+    z-index: 9999;
 }
 
 .carousel img {
     display: block;
     width: 210px;
     height: 243px;
-    transition: transform 0.3s ease, z-index 0.3s ease;
-    cursor: pointer;
     object-fit: cover;
     flex-shrink: 0;
 }
 
-.carousel img:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.carousel-primary {
+.carousel div {
     display: flex;
+    justify-content: center;
+    padding: 0 4px;
+    transition: transform 0.3s ease, padding 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
-.carousel-secondary {
-    left: 100%;
+
+.carousel div:hover {
+    transform: scale(1.5);
+    padding: 0 51px;
 }
 
-.carousel-primary,
-.carousel-secondary {
-    position: absolute;
-    flex-shrink: 0;
-    display: flex;
-    gap: 17px;
-}
 
-.carousel-primary {
-    animation: scroll-horizontal 30s linear infinite;
-}
-
-.carousel-secondary {
-    animation: scroll-horizontal 30s linear infinite;
-}
-
-/* @keyframes scroll-horizontal {
+@keyframes scroll-horizontal {
     0% {
         transform: translateX(0%);
     }
     100% {
         transform: translateX(-100%);
     }
-} */
+}
 .main-title {
     width: 100%;
     display: flex;
@@ -464,7 +464,7 @@ body {
     color: var(--main-black);
 }
 
-.service-info ul {
+.custom-list {
     list-style: none;
     font-family: "Inter Tight", serif;
     font-size: 18px;
@@ -521,4 +521,211 @@ body {
 
 .service-personal-photo {
     margin-left: 6%;
+}
+
+.organizational-issues {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--main-dark-grey);
+    color: var(--background);
+    margin-top: 115px;
+    min-height: 723px;
+}
+
+.organizational-issues h3, .organizational-issues p {
+    color: var(--background);
+}
+
+.organizational-issues-text p {
+    margin-left: 65px;
+    text-align: start;
+}
+
+.organizational-issues-text ul {
+    margin-left: 82px;
+}
+
+.organizational-issues-text ul li::before {
+    background-image: url('/assets/star-white.png');
+}
+
+.organizational-issues-img img{
+    width: 524px;
+    height: 723px;
+}
+
+.organizational-issues-img {
+    display: flex;
+    align-items: center;
+}
+
+.organizational-issues-text {
+    padding: 100px 34px 0 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    width: 64%;
+}
+
+.wedding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 213px;
+    gap: 100px
+}
+
+.wedding-services {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wedding button {
+    width: 45%;
+}
+
+.vertical-line {
+    display: flex;
+    width: 1px;
+    background-color: var(--main-black);
+}
+
+.wedding-service {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    justify-content: center;
+}
+
+.wedding-service ul {
+    margin-left: 0;
+}
+
+.wedding-slides {
+    display: flex;
+    flex-direction: row;
+    width: 91%;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.wedding-slide img {
+    width: 421px;
+    height: 602px;
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 198px 0 0 0;
+    gap: 110px;
+    padding: 0 40px;
+}
+
+.contacts-form-title {
+    font-family: "IvyOra";
+    font-size: 192px;
+    line-height: 110%;
+    color: var(--main-black);
+    letter-spacing: 0.1px;
+    display: flex;
+    text-align: center;
+}
+
+.contacts-form-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.form-container {
+    width: 49%;
+    margin: -10px 0 0 0;
+}
+
+.contacts-form-info {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+}
+
+.contacts-form-info p {
+    font-family: "Inter Tight", serif;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.1px;
+    color: var(--main-black);
+}
+
+.contacts-form-info-media-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.media-link a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: "Inter Tight", serif;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    padding: 0 0 0 5px;
+    color: var(--main-dark-grey);
+    cursor: pointer;
+}
+
+.media-link a:visited {
+    text-decoration: none;
+    color: var(--main-dark-grey);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-family: "Inter Tight", serif;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-dark-grey);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--background);
+    border: none;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder,
+select {
+    color: var(--default-grey);
+    font-family: "Inter Tight", serif;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.submit-button{
+    width: 99%;
+    margin: 26px 0 0 0;
 }
