@@ -26,6 +26,7 @@ body {
     /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 35px;
     width: 100vw;
     max-width: 1440px;
@@ -739,6 +740,7 @@ select::placeholder {
 }
 
 .footer {
+    width: 100vw;
     height: 507px;
     background-color: var(--main-dark-grey);
     display: flex;
