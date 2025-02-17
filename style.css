@@ -22,6 +22,11 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     /* margin: 0 auto; */
     display: flex;
@@ -165,7 +170,6 @@ body {
     padding: 0 51px;
 }
 
-
 @keyframes scroll-horizontal {
     0% {
         transform: translateX(0%);
@@ -228,7 +232,7 @@ body {
 
 .scroll-text:after {
     content: "";
-    background-image: url("/assets/arrow-icon.png");
+    background-image: url("./assets/arrow-icon.png");
     display: block;
     position: absolute;
     background-size: cover;
@@ -494,7 +498,7 @@ body {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('/assets/star.png');
+    background-image: url('./assets/star.png');
     background-size: cover;
 }
 
@@ -549,7 +553,7 @@ body {
 }
 
 .organizational-issues-text ul li::before {
-    background-image: url('/assets/star-white.png');
+    background-image: url('./assets/star-white.png');
 }
 
 .organizational-issues-img img{
@@ -576,7 +580,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 213px;
-    gap: 100px
+    gap: 90px
 }
 
 .wedding-services {
@@ -598,8 +602,9 @@ body {
 .wedding-service {
     display: flex;
     flex-direction: column;
-    gap: 34px;
-    justify-content: center;
+    gap: 28px;
+    justify-content: start;
+    padding-top: 28px;
 }
 
 .wedding-service ul {
@@ -684,6 +689,30 @@ body {
     padding: 0 0 0 5px;
     color: var(--main-dark-grey);
     cursor: pointer;
+}
+
+.media-link {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.media-link:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--main-black);
+    transition: .5s;
+    left: 43%;
+    transform: translate(-50%);
+}
+
+.media-link:hover:after {
+    width: 80%;
 }
 
 .media-link a:visited {
