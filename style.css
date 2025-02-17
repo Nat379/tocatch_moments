@@ -22,6 +22,11 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     /* margin: 0 auto; */
     display: flex;
@@ -164,7 +169,6 @@ body {
     transform: scale(1.5);
     padding: 0 51px;
 }
-
 
 @keyframes scroll-horizontal {
     0% {
@@ -576,7 +580,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 213px;
-    gap: 100px
+    gap: 90px
 }
 
 .wedding-services {
@@ -598,8 +602,9 @@ body {
 .wedding-service {
     display: flex;
     flex-direction: column;
-    gap: 34px;
-    justify-content: center;
+    gap: 28px;
+    justify-content: start;
+    padding-top: 28px;
 }
 
 .wedding-service ul {
@@ -684,6 +689,30 @@ body {
     padding: 0 0 0 5px;
     color: var(--main-dark-grey);
     cursor: pointer;
+}
+
+.media-link {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.media-link:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--main-black);
+    transition: .5s;
+    left: 43%;
+    transform: translate(-50%);
+}
+
+.media-link:hover:after {
+    width: 80%;
 }
 
 .media-link a:visited {
