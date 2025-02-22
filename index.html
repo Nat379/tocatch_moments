@@ -46,7 +46,7 @@
                             <div><img src="./assets/scroll-photo-6.png" alt="Photo 6"></div>
                             <div><img src="./assets/scroll-photo-7.png" alt="Photo 7"></div>
                         </div>
-                        <div class="carousel">
+                        <!-- <div class="carousel">
                             <div><img src="./assets/scroll-photo-1.png" alt="Photo 1"></div>
                             <div><img src="./assets/scroll-photo-2.png" alt="Photo 2"></div>
                             <div><img src="./assets/scroll-photo-3.png" alt="Photo 3"></div>
@@ -54,6 +54,10 @@
                             <div><img src="./assets/scroll-photo-5.png" alt="Photo 5"></div>
                             <div><img src="./assets/scroll-photo-6.png" alt="Photo 6"></div>
                             <div><img src="./assets/scroll-photo-7.png" alt="Photo 7"></div>
+                        </div> -->
+                        <div class="carousel-mobile">
+                            <div><img src="./assets/scroll-photo-mobile-1.jpg" alt="Photo 1"></div>
+                            <div><img src="./assets/scroll-photo-mobile-2.jpg" alt="Photo 2"></div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +71,11 @@
                 </div>
             </div>
             <p class="scroll-text">SCROLL TO DISCOVER</p>
+            <div class="scroll-arrow">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
         </section>
         <div class="quote">
             <img class="quote-open" src="./assets/quote-icon.png" alt="quote-open" width="82px" height="62px">
@@ -76,21 +85,21 @@
             <img class="quote-close" src="./assets/quote-icon.png" alt="quote-close" width="82px" height="62px">
         </div>
         <section class="about" id="about">
-            <img src="./assets/avatar.png" alt="photo" width="454px" height="642px">
+            <img class="avatar" src="./assets/avatar.png" alt="photo" width="454px" height="642px">
             <div class="about-text-content">
                 <h2 class="about-title">Hi everyone! <img src="./assets/star.png" alt="star" width="39px"></h2>
-                <p class="about-text">I have a great chance to share a piece of my<br> soul with you. So, you are on
+                <img class="avatar-mobile" src="./assets/avatar-mobile.jpg" alt="avatar" width="335px" height="408px">
+                <p class="about-text">I have a great chance to share a piece of my soul with you. So, you are on
                     this site. </p>
-                <p class="about-text">Photography is not just a job for me.<br>
-                    It is an opportunity to communicate with you.<br>
-                    To show you how beautiful you are, to fix your<br> family values and warmth in memory.</p>
-                <p class="about-text">Best regards,<br>
-                    your family photographer in Denmark Daria Khodii</p>
+                <p class="about-text">Photography is not just a job for me.
+                    It is an opportunity to communicate with you.
+                    To show you how beautiful you are, to fix your family values and warmth in memory.</p>
+                <p class="about-text">Best regards,<br> your family photographer in Denmark Daria Khodii</p>
             </div>
         </section>
         <section class="portfolio" id="portfolio">
             <h2 class="portfolio-title">my portfolio</h2>
-            <!-- Main Gallery -->
+            <!-- Main Gallery
             <div class="swiper gallery-top">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -122,7 +131,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
             <!-- Thumbnails Gallery -->
             <div class="swiper gallery-thumbs">
                 <div class="swiper-wrapper">
@@ -156,8 +165,14 @@
                 </div>
             </div>
             <!-- Navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <ul class="portfolio-nav-list">
+                <li class="portfolio-nav-link">Personal</li>
+                <li class="portfolio-nav-link">Love story</li>
+                <li class="portfolio-nav-link">family</li>
+                <li class="portfolio-nav-link">wedding</li>
+            </ul>
         </section>
 
     <div class="decor-horizontal-scroll">
@@ -195,8 +210,8 @@
                     <li>1-1.5 hours of shooting, +/- up to 150 editing photos;</li>
                     <li>Selection of location, image, ideas, help with posing;</li>
                     <li>Ready photos from 5 to 14 days (depending on the workload);</li>
-                    <li>Indefinite storage of processed photos on my electronic media <br>(if you have lost the photos for some reason, I will send
-                    them to<br> you again). The service is included in the cost of shooting.</li>
+                    <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos for some reason, I will send
+                    them to you again). The service is included in the cost of shooting.</li>
                 </ul>
                 <p class="service-note">*For a FAMILY PHOTOSHOOT  –  Separate part of work with children <br>(taking into account their preferences, mood,
                 consultation with <br>parents before the shooting).</p>
@@ -211,8 +226,8 @@
                         <li>30-40 minutes of shooting, +/- up to 50 editing photos;</li>
                         <li>Selection of location, image, ideas, help with posing;</li>
                         <li>Ready photos from 5 to 14 days (depending on the workload);</li>
-                        <li>Indefinite storage of processed photos on my electronic media<br> (if you have lost the photos for some reason, I will send
-                        them to<br> you again). The service is included in the cost of shooting.</li>
+                        <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos for some reason, I will send
+                        them to you again). The service is included in the cost of shooting.</li>
                     </ul>
                     <button class="button">BOOK A SHOOTING</button>
             </div>
@@ -223,18 +238,18 @@
     <div class="organizational-issues">
         <div class="organizational-issues-text">
             <h3 class="portfolio-title">ORGANIZATIONAL ISSUES </h3>
-            <p class="service-price">It is suitable for individual, family and love story shooting.<br>
+            <p class="service-price">It is suitable for individual, family and love story shooting.
             Wedding shootings are discussed in an individual format.</p>
             <ul class="custom-list">
-                <li>Reservation is made only after prepayment of 10% of the shooting’s cost.<br>
-                I will always return the prepayment in case of force majeure or illness.<br>
-                No money is refunded without valid reason.<br>
-                You can reschedule the shooting twice, for the third time the prepayment<br> is not refundable.</li>
+                <li>Reservation is made only after prepayment of 10% of the shooting’s cost.
+                I will always return the prepayment in case of force majeure or illness.
+                No money is refunded without valid reason.
+                You can reschedule the shooting twice, for the third time the prepayment is not refundable.</li>
                 <li>Gift certificates are available.</li>
                 <li>I provide basic clothes for shooting (sizes from S to L).</li>
-                <li>I take pictures in the area 6000 Kolding - Sønderborg 6400.<br>
+                <li>I take pictures in the area 6000 Kolding - Sønderborg 6400.
                 I also travel to all other cities in Denmark: the price of fuel is added<br>
-                to the cost of the shoot.<br>
+                to the cost of the shoot.
                 I do not come out to express shootings (only in my area 6400-6200).</li>
             </ul>
         </div>
@@ -255,6 +270,7 @@
                     <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos for some reason, I will send
                     them to you again). The service is included in the cost of shooting.</li>
                 </ul>
+                <button class="wedding-mobile-button button">BOOK A SHOOTING</button>
             </div>
             <div class="vertical-line"></div>
             <div class="wedding-service">
@@ -268,6 +284,7 @@
                     <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos for some reason, I will send
                     them to you again). The service is included in the cost of shooting.</li>
                 </ul>
+                <button class="wedding-mobile-button button">BOOK A SHOOTING</button>
             </div>
             <div class="vertical-line"></div>
             <div class="wedding-service">
@@ -281,9 +298,10 @@
                     <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos for some reason, I will send
                     them to you again). The service is included in the cost of shooting.</li>
                 </ul>
+                <button class="wedding-mobile-button button">BOOK A SHOOTING</button>
             </div>
         </div>
-        <button class="button">BOOK A SHOOTING</button>
+        <button class="wedding-desktop-button button">BOOK A SHOOTING</button>
         <div class="wedding-slides">
             <div class="wedding-slide"><img src="./assets/wedding-slide-1.png" alt="photo"></div>
             <div class="wedding-slide"><img src="./assets/wedding-slide-2.png" alt="photo"></div>
@@ -334,13 +352,22 @@
     </main>
     <footer id="contacts" class="footer">
         <div class="footer-content">
-                <img src="./assets/logo-light-color.png" alt="logo" width="329px" height="27px">
+                <img class="footer-logo" src="./assets/logo-light-color.png" alt="logo" width="329px" height="27px">
             <div class="media-icons">
                 <a href="https://t.me/@tocatchmoments"><img src="./assets/telegram-icon.png" alt="telegram-icon" width="36px" height="36px"></a>
                 <a href="https://www.instagram.com/tocatch.moments?igsh=YzJnMWU4NmRkNDVp"><img src="./assets/instagram-icon.png" alt="instagram-icon" width="36px"
                         height="36px"></a>
                 <a href="https://www.facebook.com/share/1BPVjo8v3n/?mibextid=wwXIfr"><img src="./assets/facebook-icon.png" alt="facebook" width="36px"
                             height="36px"></a>
+            </div>
+            <div class="footer-mobile-content">
+                <a class="mobile-contacts-tel" href="tel:+45 50 20 22 20">+45 50 20 22 20</a>
+                <a class="mobile-contacts-email" href="mailto:dariiakhodii@gmail.com">dariiakhodii@gmail.com</a>
+                <span class="footer-text">CVR</span>
+                <button class="back-to-top-button">BACK TO TOP <img src="./assets/arrow-top.svg" alt="arrow-top" width="24px" height="24px"></button>
+                <span class="mobile-footer-notes">Terms and Conditions</span>
+                <span class="mobile-footer-notes">Privacy Policy</span>
+                <span class="mobile-footer-notes"><span id="year"></span> © Усі права захищені</span>
             </div>
             <div class="footer-notes">
                 <span>Terms and Conditions</span>
