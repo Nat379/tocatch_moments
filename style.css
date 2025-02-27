@@ -6,7 +6,8 @@
     --main-dark-grey: rgba(80, 80, 80, 1);
     --default-grey: rgba(123, 123, 123, 1);
     --white: rgba(254, 254, 254, 1);
-    /* --error: rgba(181, 14, 14, 1); */
+    --error: rgba(181, 14, 14, 1);
+    outline: 4px solid green !important;
 }
 
 @font-face {
@@ -22,9 +23,9 @@
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    height: 100%;
+html {
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
@@ -34,7 +35,8 @@ body {
     justify-content: space-between;
     gap: 35px;
     width: 100vw;
-    max-width: 1440px;
+    min-height: 100vh;
+    height: 100%;
     background-color: var(--background);
     overflow-x: hidden;
 }
