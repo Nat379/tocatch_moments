@@ -41,6 +41,17 @@ body {
     overflow-x: hidden;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .header {
     width: 100vw;
     display: flex;
@@ -53,7 +64,8 @@ body {
     width: 48.6%
 }
 
-.nav-list, .portfolio-nav-list {
+.nav-list,
+.portfolio-nav-list {
     display: flex;
     max-width: 494px;
     justify-content: space-between;
@@ -469,7 +481,8 @@ body {
     display: flex;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     color: var(--main-dark-grey);
     position: absolute;
     top: 82%
@@ -548,9 +561,11 @@ body {
     justify-content: space-around;
     margin-bottom: 94px;
 }
-.service-block:first-child{
+
+.service-block:first-child {
     margin-left: 68px;
 }
+
 .service-info {
     display: flex;
     flex-direction: column;
@@ -648,7 +663,8 @@ body {
     min-height: 723px;
 }
 
-.organizational-issues h3, .organizational-issues p {
+.organizational-issues h3,
+.organizational-issues p {
     color: var(--background);
 }
 
@@ -665,7 +681,7 @@ body {
     background-image: url('./assets/star-white.png');
 }
 
-.organizational-issues-img img{
+.organizational-issues-img img {
     width: 524px;
     height: 723px;
 }
@@ -860,11 +876,11 @@ textarea {
     border-bottom: 1px solid var(--dark-grey);
 }
 
-select{
+select {
     color: var(--default-grey);
-        font-family: "Inter Tight", serif;
-        font-size: 16px;
-        line-height: 120%;
+    font-family: "Inter Tight", serif;
+    font-size: 16px;
+    line-height: 120%;
 }
 
 input::placeholder,
@@ -875,10 +891,10 @@ select::placeholder {
     font-family: "Inter Tight", serif;
     font-size: 16px;
     line-height: 120%;
-    padding:  0 10px;
+    padding: 0 10px;
 }
 
-.submit-button{
+.submit-button {
     width: 99%;
     margin: 30px 0 0 0;
 }
@@ -966,7 +982,9 @@ select::placeholder {
 }
 
 @media screen and (max-width: 1050px) {
-    .navigation, .lang-toggle {
+
+    .navigation,
+    .lang-toggle {
         display: none;
     }
 }
@@ -974,27 +992,33 @@ select::placeholder {
 @media screen and (max-width: 768px) {
     @media (hover: none) {
         .nav-list a:hover:after {
-                width: 0;
-            }
+            width: 0;
+        }
+
         .carousel div:hover {
-                transform: scale(0);
-                padding: 0;
-            }
+            transform: scale(0);
+            padding: 0;
+        }
+
         .button:hover {
-                background-color: var(--white);
-                color: var(--main-black);
-                text-decoration: none;
-            }
-            .media-link:hover:after {
-                width: 0%;
-            }
+            background-color: var(--white);
+            color: var(--main-black);
+            text-decoration: none;
+        }
+
+        .media-link:hover:after {
+            width: 0%;
+        }
     }
+
     .header {
         padding: 63px 20px 0 20px;
     }
+
     .scroll-container {
         height: 290px;
     }
+
     .main-title {
         padding: 52px 20px 0 20px;
         gap: 13px;
@@ -1006,9 +1030,11 @@ select::placeholder {
         display: flex;
         justify-content: center;
     }
+
     .main-title-part p {
         font-size: 42px;
     }
+
     .scroll-text {
         font-size: 14px;
     }
@@ -1026,6 +1052,7 @@ select::placeholder {
         gap: 30px;
         letter-spacing: 0.2px;
     }
+
     .quote-open {
         width: 42px;
         height: 48px;
@@ -1037,54 +1064,54 @@ select::placeholder {
         margin-top: 94px;
         height: 48px;
     }
- 
+
     .carousel {
         display: none;
     }
 
     .carousel-mobile {
-        width: fit-content;
+        width: 100vw;
         display: flex;
         justify-content: space-between;
         gap: 10px;
     }
 
     .carousel-mobile div {
-        width: 210px;
         object-fit: cover;
         height: 243px;
     }
 
     .carousel-mobile div img {
-        width: 210px;
         height: 243px;
     }
 
-   .about {
-       padding: 20px;
-       margin: 120px 0 0 0;
-   }
+    .about {
+        padding: 20px;
+        margin: 120px 0 0 0;
+    }
 
-   .about-title {
+    .about-title {
         font-size: 50px;
         width: 100vw;
         letter-spacing: 0.5px;
-   }
+        text-align: center;
+    }
 
-   .about-title img {
-       margin: -8px 0 43px -45px;
-   }
+    .about-title img {
+        margin: -8px 0 43px -45px;
+    }
 
     .avatar {
         display: none;
     }
 
-    .avatar-mobile{
+    .avatar-mobile {
         display: block;
         margin: 24px 0 38px 0;
     }
 
     .about-text-content {
+        align-items: center;
         width: 100%;
         gap: 0;
     }
@@ -1104,9 +1131,9 @@ select::placeholder {
         font-size: 18px;
         letter-spacing: 1.8px;
         margin: 12px 0 0 0;
-     }
+    }
 
-    .portfolio{
+    .portfolio {
         margin: 36.5% 0 24% 0;
         gap: 68px;
     }
@@ -1115,7 +1142,7 @@ select::placeholder {
         font-size: 42px;
         line-height: 110%;
         letter-spacing: -0.5px;
-     }
+    }
 
     .gallery-thumbs .swiper-slide {
         width: 100%;
@@ -1144,7 +1171,9 @@ select::placeholder {
         gap: 77px;
         margin-bottom: 9px;
     }
-    .service-personal-photo, .service-express-photo {
+
+    .service-personal-photo,
+    .service-express-photo {
         margin: 0;
         width: 335px;
         height: 480px;
@@ -1165,8 +1194,9 @@ select::placeholder {
         gap: 18px;
     }
 
-    .custom-list li, .service-note {
-       margin: 0; 
+    .custom-list li,
+    .service-note {
+        margin: 0;
     }
 
     .service-note {
@@ -1301,7 +1331,8 @@ select::placeholder {
         height: 19px;
     }
 
-    .footer-notes, .footer-content-contacts {
+    .footer-notes,
+    .footer-content-contacts {
         display: none;
     }
 
@@ -1314,7 +1345,9 @@ select::placeholder {
         margin: -15px 0 0 0;
     }
 
-    .mobile-contacts-tel, .mobile-contacts-email, .footer-text {
+    .mobile-contacts-tel,
+    .mobile-contacts-email,
+    .footer-text {
         width: 100%;
         text-align: center;
         text-decoration: none;
@@ -1325,7 +1358,7 @@ select::placeholder {
     }
 
     .mobile-contacts-email {
-        text-decoration: underline ;
+        text-decoration: underline;
         font-size: 20px;
         letter-spacing: 0.2px;
         line-height: 130%;
@@ -1349,6 +1382,7 @@ select::placeholder {
         padding: 0;
         margin: 90px 0 0 0;
     }
+
     .mobile-footer-notes {
         color: var(--background);
         font-size: 16px;
