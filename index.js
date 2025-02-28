@@ -1,30 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-   // Ініціалізація слайдера мініатюр
-  const galleryThumbs = new Swiper('.gallery-thumbs', {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-    freeMode: true,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.swiper-button-next', // Прив'язка кнопок до нижнього слайдера
-      prevEl: '.swiper-button-prev',
-    },
+const backToTopButton = document.querySelector(".back-to-top-button");
+const year = document.getElementById("year");
+const mobileYear = document.getElementById("mobile-year");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
   });
-  
+
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  // Ініціалізація слайдера мініатюр
+  // const galleryThumbs = new Swiper('.gallery-thumbs', {
+  //   loop: true,
+  //   spaceBetween: 10,
+  //   slidesPerView: 'auto',
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  //   navigation: {
+  //     nextEl: '.swiper-button-next', // Прив'язка кнопок до нижнього слайдера
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
+
   // Ініціалізація основного слайдера
-  const galleryTop = new Swiper('.gallery-top', {
+  const galleryTop = new Swiper(".gallery-top", {
     spaceBetween: 10,
     loop: true, // Включений цикл для головного слайдера
     navigation: {
-      nextEl: '.swiper-button-next', // Прив'язка кнопок до верхнього слайдера
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next", // Прив'язка кнопок до верхнього слайдера
+      prevEl: ".swiper-button-prev",
     },
-    thumbs: {
-      swiper: galleryThumbs, // Прив'язка до мініатюр
-    },
+    // thumbs: {
+    //   swiper: galleryThumbs, // Прив'язка до мініатюр
+    // },
   });
-  
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("mobile-year").textContent = new Date().getFullYear();
-})
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  year.textContent = new Date().getFullYear();
+  mobileYear.textContent = new Date().getFullYear();
+});
