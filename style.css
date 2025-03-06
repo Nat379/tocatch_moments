@@ -23,10 +23,10 @@
     scroll-behavior: smooth;
 }
 
-html {
+/* html {
     width: 100vw;
-    overflow-x: hidden;
-}
+    min-height: 100%;
+} */
 
 body {
     /* margin: 0 auto; */
@@ -41,7 +41,12 @@ body {
     overflow-x: hidden;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 .fade-in {
+    will-change: opacity, transform;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -58,6 +63,72 @@ body {
     justify-content: space-between;
     padding: 55px 64px 0 64px;
     margin: auto 0;
+}
+
+.burger-menu {
+    width: 38px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--main-black);
+    transition: 0.3s;
+}
+
+.menu {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 10;
+    gap: 80px;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 150px 0 0 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Inter Tight";
+    font-weight: 200;
+    color: var(--main-black);
+    text-transform: uppercase;
+    letter-spacing: -2%;
+    line-height: 100%;
+}
+
+.menu.active {
+    right: 0;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 10px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    transform: rotate(-45deg) translate(5px, -10px);
 }
 
 .navigation {
@@ -987,6 +1058,10 @@ select::placeholder {
     .lang-toggle {
         display: none;
     }
+
+    .burger-menu {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1013,6 +1088,16 @@ select::placeholder {
 
     .header {
         padding: 63px 20px 0 20px;
+    }
+
+    .open-menu-lang-toggle {
+        display: flex;
+        font-size: 24px;
+        font-family: "Inter Tight";
+        font-weight: 200;
+        color: var(--main-black);
+        letter-spacing: -2%;
+        line-height: 100%;
     }
 
     .scroll-container {
