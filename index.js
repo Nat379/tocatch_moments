@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
+
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
   const burger = document.querySelector(".burger-menu");
@@ -28,23 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // Відкриття/закриття при кліку на бургер
   burger.addEventListener("click", toggleMenu);
 
-
   // Закриття меню при кліку на посилання
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", toggleMenu);
   });
 
-
   // Ініціалізація слайдера мініатюр
-  const galleryThumbs = new Swiper('.gallery-thumbs', {
+  const galleryThumbs = new Swiper(".gallery-thumbs", {
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
-      nextEl: '.swiper-button-next', // Прив'язка кнопок до нижнього слайдера
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next", // Прив'язка кнопок до нижнього слайдера
+      prevEl: ".swiper-button-prev",
     },
   });
 
@@ -56,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //     nextEl: ".swiper-button-next", // Прив'язка кнопок до верхнього слайдера
   //     prevEl: ".swiper-button-prev",
   //   },
-    // thumbs: {
-    //   swiper: galleryThumbs, // Прив'язка до мініатюр
-    // },
+  // thumbs: {
+  //   swiper: galleryThumbs, // Прив'язка до мініатюр
+  // },
   // });
 
   backToTopButton.addEventListener("click", () => {
