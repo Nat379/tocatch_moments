@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 35px;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     height: 100%;
     background-color: var(--background);
@@ -58,7 +58,7 @@ body.lock {
 }
 
 .header {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 55px 64px 0 64px;
@@ -194,7 +194,7 @@ body.lock {
 }
 
 .main-screen {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,7 +202,7 @@ body.lock {
 }
 
 .scroll-content {
-    width: 100vw;
+    width: 100%;
     background-color: var(--background);
     overflow-x: hidden;
     display: flex;
@@ -315,6 +315,10 @@ body.lock {
     text-decoration: underline;
 }
 
+.link-button {
+    text-decoration: none;
+}
+
 .main-screen:last-child {
     font-size: 14px;
     font-family: "Inter", serif;
@@ -407,7 +411,7 @@ body.lock {
 
 .quote {
     margin-top: 116px;
-    width: 100vw;
+    width: 100%;
     height: 401px;
     gap: 40px;
     display: flex;
@@ -431,7 +435,7 @@ body.lock {
 }
 
 .about {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -477,7 +481,7 @@ body.lock {
 }
 
 .portfolio {
-    width: 100vw;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -584,7 +588,7 @@ body.lock {
 
 .decor-horizontal-scroll {
     position: relative;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
@@ -621,7 +625,7 @@ body.lock {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     margin: 202px 0 0 0;
     gap: 100px;
 }
@@ -706,8 +710,12 @@ body.lock {
     letter-spacing: 0.2px;
 }
 
-.service-info button {
+.service-info a {
     width: 74%;
+}
+
+.service-info button {
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -724,7 +732,7 @@ body.lock {
 }
 
 .organizational-issues {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -771,7 +779,7 @@ body.lock {
 }
 
 .wedding {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,8 +794,12 @@ body.lock {
     flex-direction: row;
 }
 
-.wedding button {
+.wedding a {
     width: 45%;
+}
+
+.wedding button {
+    width: 100%;
 }
 
 .vertical-line {
@@ -810,9 +822,11 @@ body.lock {
 
 .wedding-slides {
     display: flex;
+    position: relative;
     flex-direction: row;
     width: 91%;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     flex-wrap: wrap;
     gap: 20px;
@@ -821,6 +835,57 @@ body.lock {
 .wedding-slide img {
     width: 421px;
     height: 602px;
+    object-fit: cover;
+}
+
+.black-white-wedding-slide {
+    position: relative;
+    width: 421px;
+    height: 602px;
+}
+
+.black-white-wedding-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 30s infinite;
+}
+
+.black-white-wedding-slide .bw-1 {
+    animation-delay: 0s;
+}
+
+.black-white-wedding-slide .bw-2 {
+    animation-delay: 10s;
+}
+
+.black-white-wedding-slide .bw-3 {
+    animation-delay: 20s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .wedding-mobile-button {
@@ -828,7 +893,7 @@ body.lock {
 }
 
 .contacts-form {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -971,7 +1036,7 @@ select::placeholder {
 }
 
 .footer {
-    width: 100vw;
+    width: 100%;
     height: 507px;
     background-color: var(--main-dark-grey);
     display: flex;
@@ -1155,7 +1220,7 @@ select::placeholder {
     }
 
     .carousel-mobile {
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -1177,7 +1242,7 @@ select::placeholder {
 
     .about-title {
         font-size: 50px;
-        width: 100vw;
+        width: 100%;
         letter-spacing: 0.5px;
         text-align: center;
     }
@@ -1245,7 +1310,7 @@ select::placeholder {
 
     .services {
         margin: 158px 0 0 0;
-        width: 100vw;
+        width: 100%;
         padding: 0 20px;
         gap: 63px;
     }
@@ -1307,7 +1372,7 @@ select::placeholder {
     }
 
     .organizational-issues-text {
-        width: 100vw;
+        width: 100%;
         padding: 0 20px;
         align-items: center;
     }
@@ -1340,6 +1405,13 @@ select::placeholder {
         gap: 29px
     }
 
+    .wedding a,
+    .service-info a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .wedding-service h3 {
         font-size: 36px;
     }
@@ -1365,7 +1437,8 @@ select::placeholder {
         display: none;
     }
 
-    .wedding-slide img {
+    .wedding-slide img,
+    .black-white-wedding-slide {
         width: 336px;
         height: 480px;
         object-fit: cover;
