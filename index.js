@@ -13,25 +13,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-  const burger = document.querySelector(".burger-menu");
-  const menu = document.querySelector(".menu");
-  const overlay = document.querySelector(".overlay");
-  const body = document.body;
+const burger = document.querySelector(".burger-menu");
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.overlay');
+const body = document.body;
 
-  // Функція для відкриття/закриття меню
-  function toggleMenu() {
-    burger.classList.toggle("active");
-    menu.classList.toggle("active");
-    body.classList.toggle("lock"); // Заборона прокручування
-  }
+// Функція для відкриття/закриття меню
+function toggleMenu() {
+  burger.classList.toggle('active');
+  menu.classList.toggle('active');
+  overlay.classList.toggle('active');
+  body.classList.toggle('lock'); // Заборона прокручування
+}
 
-  // Відкриття/закриття при кліку на бургер
-  burger.addEventListener("click", toggleMenu);
+// Відкриття/закриття при кліку на бургер
+burger.addEventListener('click', toggleMenu);
 
-  // Закриття меню при кліку на посилання
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", toggleMenu);
-  });
+// Закриття меню при кліку на оверлей
+overlay.addEventListener('click', toggleMenu);
+
+// Закриття меню при кліку на посилання
+menu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', toggleMenu);
+});
 
   // Ініціалізація слайдера мініатюр
   const galleryThumbs = new Swiper(".gallery-thumbs", {
