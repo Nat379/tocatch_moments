@@ -45,6 +45,24 @@ body.lock {
     overflow: hidden;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9;
+}
+
+.menu.active+.overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
 .fade-in {
     will-change: opacity, transform;
     opacity: 0;
@@ -838,7 +856,8 @@ body.lock {
     object-fit: cover;
 }
 
-.black-white-wedding-slide {
+.black-white-wedding-slide,
+.wedding-slide {
     position: relative;
     width: 421px;
     height: 602px;
@@ -1028,6 +1047,13 @@ select::placeholder {
     font-size: 16px;
     line-height: 120%;
     padding: 0 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+select:focus {
+    outline: none;
 }
 
 .submit-button {
@@ -1241,7 +1267,7 @@ select::placeholder {
     }
 
     .about-title {
-        font-size: 50px;
+        font-size: 49px;
         width: 100%;
         letter-spacing: 0.5px;
         text-align: center;
@@ -1395,7 +1421,7 @@ select::placeholder {
     }
 
     .organizational-issues-img img {
-        width: 375px;
+        width: 100%;
         height: 562px;
         object-fit: cover;
     }
@@ -1438,6 +1464,7 @@ select::placeholder {
     }
 
     .wedding-slide img,
+    .wedding-slide,
     .black-white-wedding-slide {
         width: 336px;
         height: 480px;
