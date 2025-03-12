@@ -1,6 +1,10 @@
 const backToTopButton = document.querySelector(".back-to-top-button");
 const year = document.getElementById("year");
 const mobileYear = document.getElementById("mobile-year");
+const burger = document.querySelector(".burger-menu");
+const menu = document.querySelector(".menu");
+const overlay = document.querySelector(".overlay");
+const body = document.body;
 
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
@@ -13,31 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-const burger = document.querySelector(".burger-menu");
-const menu = document.querySelector('.menu');
-const overlay = document.querySelector('.overlay');
-const body = document.body;
-
-// Функція для відкриття/закриття меню
+// burger menu
 function toggleMenu() {
   burger.classList.toggle('active');
   menu.classList.toggle('active');
   overlay.classList.toggle('active');
-  body.classList.toggle('lock'); // Заборона прокручування
+  body.classList.toggle('lock');
 }
 
-// Відкриття/закриття при кліку на бургер
 burger.addEventListener('click', toggleMenu);
 
-// Закриття меню при кліку на оверлей
 overlay.addEventListener('click', toggleMenu);
 
-// Закриття меню при кліку на посилання
 menu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', toggleMenu);
 });
 
-  // Ініціалізація слайдера мініатюр
+  // slider
   const galleryThumbs = new Swiper(".gallery-thumbs", {
     loop: true,
     spaceBetween: 10,
@@ -45,24 +41,25 @@ menu.querySelectorAll('a').forEach(link => {
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
-      nextEl: ".swiper-button-next", // Прив'язка кнопок до нижнього слайдера
+      nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
 
-  // Ініціалізація основного слайдера
-  // const galleryTop = new Swiper(".gallery-top", {
-  //   spaceBetween: 10,
-  //   loop: true, // Включений цикл для головного слайдера
-  //   navigation: {
-  //     nextEl: ".swiper-button-next", // Прив'язка кнопок до верхнього слайдера
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  // thumbs: {
-  //   swiper: galleryThumbs, // Прив'язка до мініатюр
-  // },
-  // });
+  // submit form
+  let submitted = false;
+  window.onload = function () {
+    document.querySelector("form").addEventListener("submit", function (event) {
+      submitted = true;
+      setTimeout(function () {
+        if (submitted) {
+          alert("Your booking request has been sent successfully!");
+        }
+      }, 1000);
+    });
+  };
 
+// Back to top button
   backToTopButton.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
@@ -70,6 +67,7 @@ menu.querySelectorAll('a').forEach(link => {
     });
   });
 
+// Year
   year.textContent = new Date().getFullYear();
   mobileYear.textContent = new Date().getFullYear();
 });

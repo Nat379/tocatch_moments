@@ -7,7 +7,7 @@
     --default-grey: rgba(123, 123, 123, 1);
     --white: rgba(254, 254, 254, 1);
     --error: rgba(181, 14, 14, 1);
-    outline: 4px solid green !important;
+    /* outline: 4px solid green !important; */
 }
 
 @font-face {
@@ -23,13 +23,8 @@
     scroll-behavior: smooth;
 }
 
-/* html {
-    width: 100vw;
-    min-height: 100%;
-} */
 
 body {
-    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,7 +37,7 @@ body {
 }
 
 body.lock {
-    overflow: hidden;
+    position: fixed;
 }
 
 .overlay {
@@ -113,6 +108,7 @@ body.lock {
     transition: right 0.3s ease;
     z-index: 10;
     gap: 80px;
+    overflow-y: auto;
 }
 
 .menu ul {
@@ -272,20 +268,6 @@ body.lock {
     position: relative;
 }
 
-
-/* .carousel div:hover {
-    transform: scale(1.5);
-    padding: 0 51px;
-} */
-
-/* @keyframes scroll-horizontal {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-} */
 .main-title {
     width: 100%;
     display: flex;
