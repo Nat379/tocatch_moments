@@ -66,15 +66,6 @@
                             <div><img src="./assets/scroll-photo-6.png" alt="Photo 6"></div>
                             <div><img src="./assets/scroll-photo-7.png" alt="Photo 7"></div>
                         </div>
-                        <!-- <div class="carousel">
-                            <div><img src="./assets/scroll-photo-1.png" alt="Photo 1"></div>
-                            <div><img src="./assets/scroll-photo-2.png" alt="Photo 2"></div>
-                            <div><img src="./assets/scroll-photo-3.png" alt="Photo 3"></div>
-                            <div><img src="./assets/scroll-photo-4.png" alt="Photo 4"></div>
-                            <div><img src="./assets/scroll-photo-5.png" alt="Photo 5"></div>
-                            <div><img src="./assets/scroll-photo-6.png" alt="Photo 6"></div>
-                            <div><img src="./assets/scroll-photo-7.png" alt="Photo 7"></div>
-                        </div> -->
                         <div class="carousel-mobile">
                             <div><img src="./assets/scroll-photo-mobile-1.jpg" alt="Photo 1"></div>
                             <div><img src="./assets/scroll-photo-mobile-2.jpg" alt="Photo 2"></div>
@@ -119,40 +110,6 @@
         </section>
         <section class="portfolio fade-in" id="portfolio">
             <h2 class="portfolio-title">my portfolio</h2>
-            <!-- Main Gallery
-            <div class="swiper gallery-top">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-2.png" alt="Photo 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-1.png" alt="Photo 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-3.png" alt="Photo 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-4.png" alt="Photo 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-5.png" alt="Photo 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-1.png" alt="Photo 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-3.png" alt="Photo 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-4.png" alt="Photo 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-5.png" alt="Photo 5">
-                    </div>
-                </div>
-                
-            </div> -->
-            <!-- Thumbnails Gallery -->
             <div class="swiper gallery-thumbs fade-in">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -184,9 +141,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
             <ul class="portfolio-nav-list fade-in">
                 <li class="portfolio-nav-link">Personal</li>
                 <li class="portfolio-nav-link">Love story</li>
@@ -343,13 +297,13 @@
                 <div class="wedding-slide">
                     <img src="./assets/wedding-slide-1.png" alt="photo">
                 </div>
-            
+
                 <div class="wedding-slide black-white-wedding-slide">
                     <img src="./assets/wedding-slide-2.png" class="bw-photo bw-1" alt="bw-photo">
                     <img src="./assets/bw-photo-test.jpg" class="bw-photo bw-2" alt="bw-photo">
                     <img src="./assets/bw-photo-test-2.jpg" class="bw-photo bw-3" alt="bw-photo">
                 </div>
-            
+
                 <div class="wedding-slide">
                     <img src="./assets/wedding-slide-3.png" alt="photo">
                 </div>
@@ -372,18 +326,20 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    <form>
+                    <form
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ187eFSevKvgm7LAlbFtI0_-hwaqsUy75pHMzaqaKE8Ni6w/formResponse"
+                        method="POST" onsubmit="submitted=true;" target="_blank">
                         <label for="name">NAME</label>
-                        <input type="text" id="name" placeholder="Your name">
+                        <input type="text" name="entry.317903081" id="name" placeholder="Your name" required>
 
                         <label for="phone">PHONE</label>
-                        <input type="tel" id="phone" placeholder="Your phone number">
+                        <input type="tel" name="entry.1255333757" id="phone" placeholder="Your phone number" required>
 
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" placeholder="email@gmail.com">
+                        <input type="email" name="entry.1795083361" id="email" placeholder="email@gmail.com" required>
 
                         <label for="photoshoot">TYPE OF PHOTOSHOOT</label>
-                        <select id="photoshoot">
+                        <select id="photoshoot" name="entry.1561759457">
                             <!-- <option value="personal">Choose the type of photosession</option> -->
                             <option value="personal">Personal photoshoot</option>
                             <option value="family">Family photoshoot</option>
@@ -393,10 +349,10 @@
                         </select>
 
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" placeholder="Start typing..."></textarea>
+                        <textarea id="message" name="entry.734765122" placeholder="Start typing..."></textarea>
 
-                        <a class="link-button" href="#form"><button class="button submit-button" type="submit">BOOK A
-                                SHOOTING</button></a>
+                        <button class="button submit-button" type="submit">BOOK A
+                            SHOOTING</button>
                     </form>
                 </div>
             </div>
