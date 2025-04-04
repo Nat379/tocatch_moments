@@ -13,6 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>to catch moments</title>
@@ -30,7 +33,7 @@
             </ul>
         </nav>
         <div class="lang-toggle">
-            <span class="ua-lang inactive-lang">UA</span>/<span class="en-lang">EN</span>
+            <span class="ua-lang inactive-lang" data-lang="ua">UA</span>/<span class="en-lang" data-lang="en">EN</span>
         </div>
         <div class="burger-menu">
             <span></span>
@@ -44,8 +47,8 @@
             <li class="nav-link"><a href="#services">Services</a></li>
             <li class="nav-link"><a href="#contacts">Contacts</a></li>
             <li>
-                <div class="open-menu-lang-toggle">
-                    <span class="ua-lang inactive-lang">UA</span>/<span class="en-lang">EN</span>
+                <div class="open-menu-lang-toggle lang-toggle">
+                    <span class="ua-lang inactive-lang" data-lang="ua">UA</span>/<span class="en-lang">EN</span>
                 </div>
             </li>
         </ul>
@@ -58,13 +61,14 @@
                 <div class="scroll-container">
                     <div class="carousel-wrapper">
                         <div class="carousel">
-                            <div><img src="./assets/scroll-photo-1.png" alt="Photo 1"></div>
-                            <div><img src="./assets/scroll-photo-2.png" alt="Photo 2"></div>
-                            <div><img src="./assets/scroll-photo-3.png" alt="Photo 3"></div>
-                            <div><img src="./assets/scroll-photo-4.png" alt="Photo 4"></div>
-                            <div><img src="./assets/scroll-photo-5.png" alt="Photo 5"></div>
-                            <div><img src="./assets/scroll-photo-6.png" alt="Photo 6"></div>
-                            <div><img src="./assets/scroll-photo-7.png" alt="Photo 7"></div>
+                            <div><img src="./assets/scroll-photo-1.jpg" alt="Photo 1"></div>
+                            <div><img src="./assets/scroll-photo-2.jpg" alt="Photo 2"></div>
+                            <div><img src="./assets/scroll-photo-3.jpg" alt="Photo 3"></div>
+                            <div><img src="./assets/scroll-photo-4.jpg" alt="Photo 4"></div>
+                            <div><img src="./assets/scroll-photo-5.jpg" alt="Photo 5"></div>
+                            <div><img src="./assets/scroll-photo-6.jpg" alt="Photo 6"></div>
+                            <div><img src="./assets/scroll-photo-7.jpg" alt="Photo 7"></div>
+                            <div><img src="./assets/scroll-photo-8.jpg" alt="Photo 8"></div>
                         </div>
                         <div class="carousel-mobile">
                             <div><img src="./assets/scroll-photo-mobile-1.jpg" alt="Photo 1"></div>
@@ -90,7 +94,7 @@
         </section>
         <div class="fade-in quote">
             <img class="quote-open" src="./assets/quote-icon.png" alt="quote-open" width="82" height="62">
-            <p>If you think a photo is not important, wait until<br>
+            <p data-key="quote">If you think a photo is not important, wait until<br>
                 it becomes the only thing that has left with you.<br>
                 The value of the moment comes with time.</p>
             <img class="quote-close" src="./assets/quote-icon.png" alt="quote-close" width="82" height="62">
@@ -98,46 +102,31 @@
         <section class="fade-in about" id="about">
             <img class="avatar fade-in" src="./assets/avatar.png" alt="photo" width="454" height="642">
             <div class="about-text-content fade-in">
-                <h2 class="about-title">Hi everyone! <img src="./assets/star.png" alt="star" width="39"></h2>
+                <h2 class="about-title" data-key="about-title" >Hi everyone!</h2><img class="about-title-star" src="./assets/star.png" alt="star" width="39">
                 <img class="avatar-mobile" src="./assets/avatar-mobile.jpg" alt="avatar" width="335" height="408">
-                <p class="about-text">I have a great chance to share a piece of my soul with you. So, you are on
+                <p class="about-text" data-key="about-text-1" >I have a great chance to share a piece of my soul with you. So, you are on
                     this site. </p>
-                <p class="about-text">Photography is not just a job for me.
+                <p class="about-text" data-key="about-text-2" >Photography is not just a job for me.
                     It is an opportunity to communicate with you.
                     To show you how beautiful you are, to fix your family values and warmth in memory.</p>
-                <p class="about-text">Best regards,<br> your family photographer in Denmark Daria Khodii</p>
+                <p class="about-text" data-key="about-text-3">Best regards,<br> your family photographer in Denmark Daria Khodii</p>
             </div>
         </section>
-        <section class="portfolio fade-in" id="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2 class="portfolio-title">my portfolio</h2>
-            <div class="swiper gallery-thumbs fade-in">
+            <div class="swiper gallery-thumbs">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-2.png" alt="Thumbnail 1">
+                        <img src="./assets/portfolio-photo-1.jpg" alt="portfolio-photo-1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-1.png" alt="Thumbnail 1">
+                        <img src="./assets/portfolio-photo-2.jpg" alt="portfolio-photo-2">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-3.png" alt="Thumbnail 3">
+                        <img src="./assets/portfolio-photo-3.jpg" alt="portfolio-photo-3">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-4.png" alt="Thumbnail 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-5.png" alt="Thumbnail 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-1.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-3.png" alt="Thumbnail 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-4.png" alt="Thumbnail 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/portfolio-photo-5.png" alt="Thumbnail 5">
+                        <img src="./assets/portfolio-photo-4.jpg" alt="portfolio-photo-4">
                     </div>
                 </div>
             </div>
@@ -175,22 +164,22 @@
         <section class="services fade-in" id="services">
             <h2 class="portfolio-title fade-in">SERVICES</h2>
             <div class="service-block fade-in">
-                <div><img src="./assets/services-photo-1.png" alt="family photo" class="service-personal-photo"
+                <div><img src="./assets/services-photo-1.jpg" alt="family photo" class="service-personal-photo"
                         width="533" height="540"></div>
                 <div class="service-info fade-in">
-                    <h3 class="service-title">personal / love story / Family*
+                    <h3 class="service-title" data-key="service-title-personal">personal / love story / Family*
                         photoshoot</h3>
                     <p class="service-price">1800 DDK (240 €)</p>
                     <ul class="custom-list">
-                        <p>The price includes:</p>
-                        <li>1-1.5 hours of shooting, +/- up to 150 editing photos;</li>
-                        <li>Selection of location, image, ideas, help with posing;</li>
-                        <li>Ready photos from 5 to 14 days (depending on the workload);</li>
-                        <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos
+                        <p data-key="service-custom-list-personal">The price includes:</p>
+                        <li data-key="service-custom-list-personal-1">1-1.5 hours of shooting, +/- up to 150 editing photos;</li>
+                        <li data-key="service-custom-list-personal-2">Selection of location, image, ideas, help with posing;</li>
+                        <li data-key="service-custom-list-personal-3">Ready photos from 5 to 14 days (depending on the workload);</li>
+                        <li data-key="service-custom-list-personal-4">Indefinite storage of processed photos on my electronic media (if you have lost the photos
                             for some reason, I will send
                             them to you again). The service is included in the cost of shooting.</li>
                     </ul>
-                    <p class="service-note">*For a FAMILY PHOTOSHOOT  –  Separate part of work with children <br>(taking
+                    <p class="service-note" data-key="service-custom-list-family">*For a FAMILY PHOTOSHOOT  –  Separate part of work with children <br>(taking
                         into account their preferences, mood,
                         consultation with <br>parents before the shooting).</p>
                     <a class="link-button" href="#form"><button class="button">BOOK A SHOOTING</button></a>
@@ -198,44 +187,44 @@
             </div>
             <div class="service-block service-express fade-in">
                 <div class="service-info fade-in">
-                    <h3 class="service-title">Express photoshoot</h3>
+                    <h3 class="service-title" data-key="service-title-express">Express photoshoot</h3>
                     <p class="service-price">1000 DDK</p>
-                    <ul class="custom-list">
-                        <p>The price includes:</p>
-                        <li>30-40 minutes of shooting, +/- up to 50 editing photos;</li>
-                        <li>Selection of location, image, ideas, help with posing;</li>
-                        <li>Ready photos from 5 to 14 days (depending on the workload);</li>
-                        <li>Indefinite storage of processed photos on my electronic media (if you have lost the photos
+                    <ul class="service-custom-list-express custom-list">
+                        <p data-key="service-custom-list-express">The price includes:</p>
+                        <li data-key="service-custom-list-express-1">30-40 minutes of shooting, +/- up to 50 editing photos;</li>
+                        <li data-key="service-custom-list-express-2">Selection of location, image, ideas, help with posing;</li>
+                        <li data-key="service-custom-list-express-3">Ready photos from 5 to 14 days (depending on the workload);</li>
+                        <li data-key="service-custom-list-express-4">Indefinite storage of processed photos on my electronic media (if you have lost the photos
                             for some reason, I will send
                             them to you again). The service is included in the cost of shooting.</li>
                     </ul>
                     <a class="link-button" href="#form"><button class="button">BOOK A SHOOTING</button></a>
                 </div>
-                <div><img src="./assets/services-photo-2.png" class="service-express-photo" alt="express photo"
+                <div><img src="./assets/services-photo-2.jpg" class="service-express-photo" alt="express photo"
                         width="533" height="540"></div>
             </div>
         </section>
 
         <div class="organizational-issues fade-in">
             <div class="organizational-issues-text">
-                <h3 class="portfolio-title">ORGANIZATIONAL ISSUES </h3>
-                <p class="service-price">It is suitable for individual, family and love story shooting.
+                <h3 class="portfolio-title" data-key="organizational-issues">ORGANIZATIONAL ISSUES </h3>
+                <p class="service-price" data-key="organizational-issues-1">It is suitable for individual, family and love story shooting.
                     Wedding shootings are discussed in an individual format.</p>
                 <ul class="custom-list">
-                    <li>Reservation is made only after prepayment of 10% of the shooting’s cost.
+                    <li data-key="organizational-issues-2">Reservation is made only after prepayment of 10% of the shooting’s cost.
                         I will always return the prepayment in case of force majeure or illness.
                         No money is refunded without valid reason.
                         You can reschedule the shooting twice, for the third time the prepayment is not refundable.</li>
-                    <li>Gift certificates are available.</li>
-                    <li>I provide basic clothes for shooting (sizes from S to L).</li>
-                    <li>I take pictures in the area 6000 Kolding - Sønderborg 6400.
+                    <li data-key="organizational-issues-3">Gift certificates are available.</li>
+                    <li data-key="organizational-issues-4">provide basic clothes for shooting (sizes from S to L).</li>
+                    <li data-key="organizational-issues-5">I take pictures in the area 6000 Kolding - Sønderborg 6400.
                         I also travel to all other cities in Denmark: the price of fuel is added<br>
                         to the cost of the shoot.
                         I do not come out to express shootings (only in my area 6400-6200).</li>
                 </ul>
             </div>
             <div class="organizational-issues-img fade-in">
-                <img src="./assets/organizational-issues-img.png" alt="photo">
+                <img src="./assets/organizational-issues-img.jpg" alt="photo">
             </div>
         </div>
         <div class="wedding fade-in">
@@ -295,17 +284,17 @@
                     SHOOTING</button></a>
             <div class="wedding-slides fade-in">
                 <div class="wedding-slide">
-                    <img src="./assets/wedding-slide-1.png" alt="photo">
+                    <img src="./assets/wedding-slide-1.jpg" alt="photo">
                 </div>
 
                 <div class="wedding-slide black-white-wedding-slide">
-                    <img src="./assets/wedding-slide-2.png" class="bw-photo bw-1" alt="bw-photo">
+                    <img src="./assets/wedding-slide-2.jpg" class="bw-photo bw-1" alt="bw-photo">
                     <img src="./assets/bw-photo-test.jpg" class="bw-photo bw-2" alt="bw-photo">
                     <img src="./assets/bw-photo-test-2.jpg" class="bw-photo bw-3" alt="bw-photo">
                 </div>
 
                 <div class="wedding-slide">
-                    <img src="./assets/wedding-slide-3.png" alt="photo">
+                    <img src="./assets/wedding-slide-3.jpg" alt="photo">
                 </div>
             </div>
         </div>
@@ -360,7 +349,7 @@
     </main>
     <footer id="contacts" class="footer fade-in">
         <div class="footer-content">
-            <img class="footer-logo" src="./assets/logo-light-color.png" alt="logo" width="329" height="27">
+            <img class="footer-logo" src="./assets/logo-light-color.png" alt="logo" width="310" height="25">
             <div class="media-icons">
                 <a href="https://t.me/@tocatchmoments"><img src="./assets/telegram-icon.png" alt="telegram-icon"
                         width="36" height="36"></a>
@@ -396,6 +385,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
+    <script src="./lang-toggle.js"></script>
 </body>
 
 </html>
