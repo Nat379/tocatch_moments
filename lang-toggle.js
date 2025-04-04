@@ -1,5 +1,5 @@
-const uaButton = document.querySelector(".ua-lang");
-const enButton = document.querySelector(".en-lang");
+const uaButtons = document.querySelectorAll(".ua-lang");
+const enButtons = document.querySelectorAll(".en-lang");
 
 // Функція встановлення мови
 function setLanguage(lang) {
@@ -22,8 +22,12 @@ function setLanguage(lang) {
       document.documentElement.setAttribute("lang", lang);
 
       // Додаємо/видаляємо активний клас у кнопках мови
-      uaButton.classList.toggle("inactive-lang", lang !== "ua");
-      enButton.classList.toggle("inactive-lang", lang !== "en");
+      uaButtons.forEach((btn) =>
+        btn.classList.toggle("inactive-lang", lang !== "ua")
+      );
+      enButtons.forEach((btn) =>
+        btn.classList.toggle("inactive-lang", lang !== "en")
+      );
     })
     .catch((error) => console.error("Error loading language file:", error));
 }
@@ -37,14 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Обробники подій для перемикання мови
-uaButton.addEventListener("click", () => {
-  if (localStorage.getItem("language") !== "ua") {
-    setLanguage("ua");
-  }
+uaButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (localStorage.getItem("language") !== "ua") {
+      setLanguage("ua");
+    }
+  });
 });
 
-enButton.addEventListener("click", () => {
-  if (localStorage.getItem("language") !== "en") {
-    setLanguage("en");
-  }
+enButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (localStorage.getItem("language") !== "en") {
+      setLanguage("en");
+    }
+  });
 });

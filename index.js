@@ -17,22 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-// burger menu
-function toggleMenu() {
-  burger.classList.toggle('active');
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-  body.classList.toggle('lock');
-}
+  // burger menu
+  function toggleMenu() {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+    body.classList.toggle("lock");
+  }
 
-burger.addEventListener('click', toggleMenu);
+  burger.addEventListener("click", toggleMenu);
 
-overlay.addEventListener('click', toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
 
-menu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', toggleMenu);
-});
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", toggleMenu);
+  });
 
+  document.querySelector(".open-menu-lang-toggle").addEventListener("click", () => {
+      toggleMenu();
+    });
   // slider
   const galleryThumbs = new Swiper(".gallery-thumbs", {
     loop: true,
@@ -59,7 +62,7 @@ menu.querySelectorAll('a').forEach(link => {
     });
   };
 
-// Back to top button
+  // Back to top button
   backToTopButton.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
@@ -67,7 +70,7 @@ menu.querySelectorAll('a').forEach(link => {
     });
   });
 
-// Year
+  // Year
   year.textContent = new Date().getFullYear();
   mobileYear.textContent = new Date().getFullYear();
 });
