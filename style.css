@@ -10,10 +10,14 @@
     /* outline: 4px solid green !important; */
 }
 
+[data-key] {
+    white-space: pre-line;
+}
+
 @font-face {
-    font-family: "ivyOra";
-    src: url("./fonts/IvyOraDisplay-Thin.woff") format(woff);
-    font-weight: normal;
+    font-family: "IvyOra";
+    src: url("./fonts/IvyOraDisplay-Thin.woff") format("woff");
+    font-weight: 100;
     font-style: normal;
 }
 
@@ -164,7 +168,8 @@ body.lock {
     text-transform: uppercase;
     font-family: "Inter Tight", serif;
     font-size: 16px;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
+    font-weight: 300;
     line-height: 100%;
 }
 
@@ -198,7 +203,8 @@ body.lock {
 .lang-toggle {
     font-family: "Inter Tight", serif;
     font-size: 16px;
-    letter-spacing: -2%;
+    font-weight: 300;
+    letter-spacing: -0.02em;
     line-height: 100%;
     cursor: pointer;
 }
@@ -324,6 +330,13 @@ body.lock {
     font-family: "Inter", serif;
 }
 
+.scroll-text {
+    font-family: "Inter Tight", serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
 .scroll-arrow {
     position: relative;
     width: 16px;
@@ -410,7 +423,7 @@ body.lock {
 }
 
 .quote {
-    margin-top: 116px;
+    margin: 116px auto 0 auto;
     width: 100%;
     height: 401px;
     gap: 40px;
@@ -425,6 +438,12 @@ body.lock {
     letter-spacing: 0.7px;
 }
 
+[lang="ua"] .quote {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 100;
+    font-size: 26px;
+}
+
 .quote-open {
     margin-top: -35px;
 }
@@ -432,6 +451,11 @@ body.lock {
 .quote-close {
     margin-top: 35px;
     transform: rotate(180deg);
+}
+
+.quote p {
+    width: 33%;
+    text-align: center;
 }
 
 .about {
@@ -451,33 +475,48 @@ body.lock {
     width: 49%;
     display: flex;
     flex-direction: column;
-    gap: 29px;
+    gap: 26px;
     letter-spacing: 1.3px;
 }
 
 .about-title {
     font-family: "ivyOra";
     font-size: 64px;
+    font-weight: 200;
     line-height: 100%;
+    letter-spacing: 0;
     text-transform: uppercase;
-    margin: 31px 0 20px 6px;
+    margin: 53px 0 20px 3px;
 }
 
-.about-title img {
-    margin: 0 0 36px -16px;
+[lang="ua"] .about-title {
+    font-family: "Cormorant Infant", serif;
+    font-size: 74px;
+    font-weight: 200;
+}
+
+.about-title-star {
+    position: absolute;
+    left: 77%;
+    top: 7%;
+}
+
+[lang="ua"] .about-title-star {
+    left: 54%;
 }
 
 .about-text {
-    width: 82%;
-    font-family: "Inter Regular", serif;
+    width: 76%;
+    font-family: "Inter Tight", serif;
+    font-weight: 300;
     font-size: 18px;
     line-height: 130%;
-    letter-spacing: 1.8px;
+    letter-spacing: 0.05em;
 }
 
 .about-text:last-child {
     width: 90%;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .portfolio {
@@ -497,7 +536,13 @@ body.lock {
     font-family: "ivyOra";
     font-size: 64px;
     line-height: 100%;
+    font-weight: 200;
     text-transform: uppercase;
+}
+
+[lang="ua"] .portfolio-title {
+    font-family: "Cormorant Infant", serif;
+    font-size: 62px;
 }
 
 .swiper {
@@ -572,21 +617,23 @@ body.lock {
 }
 
 .portfolio-nav-list {
-    margin-top: -16px;
+    margin-top: -23px;
     width: 25%;
 }
 
 .portfolio-nav-link {
     text-transform: uppercase;
-    font-family: "Inte Tight Light";
+    font-family: "Inter Tight", serif;
+    font-weight: 300;
     color: var(--main-black);
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     cursor: pointer;
 }
 
 .decor-horizontal-scroll {
+    opacity: 0.5;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -646,7 +693,7 @@ body.lock {
     flex-direction: column;
     width: 44%;
     margin: -27px 0 0 0;
-    gap: 31px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -655,14 +702,22 @@ body.lock {
     font-family: "IvyOra";
     font-size: 40px;
     line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0.01em;
     text-align: center;
     color: var(--main-black);
+}
+
+[lang="ua"] .service-title {
+    font-family: "Cormorant Infant", serif;
+    font-size: 42px;
 }
 
 .service-price {
     font-family: "Inter Tight", serif;
     font-size: 20px;
     line-height: 130%;
+    font-weight: 400;
     text-align: center;
     color: var(--main-black);
 }
@@ -676,10 +731,15 @@ body.lock {
     flex-direction: column;
     gap: 21px;
     margin-left: 42px;
-    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.custom-list-express {
+    margin-left: 18px;
 }
 
 .custom-list li {
+    width: 78%;
     font-family: "Inter Tight", serif;
     font-size: 16px;
     line-height: 120%;
@@ -688,12 +748,15 @@ body.lock {
     position: relative;
 }
 
+.service-express ul {
+    width: 100%;
+    margin-left: 46px;
+}
+
 .custom-list li::before {
     content: "";
     position: absolute;
     left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     background-image: url('./assets/star.png');
@@ -701,9 +764,9 @@ body.lock {
 }
 
 .service-note {
-    width: 74%;
+    width: 68%;
     text-align: justify;
-    margin: -18px 0 0 52px;
+    margin: -13px 0 0 14px;
     font-family: "Inter Tight Light", serif;
     font-size: 14px;
     line-height: 120%;
@@ -716,19 +779,24 @@ body.lock {
 
 .service-info button {
     width: 100%;
-    margin-top: 20px;
 }
 
 .service-express {
     padding: 0 5% 0 3%;
 }
 
+.service-express a {
+    width: 80%;
+}
+
 .service-express-photo {
-    margin-top: -50px;
+    object-fit: cover;
+    margin: -9% 0 0 1%;
 }
 
 .service-personal-photo {
-    margin-left: 6%;
+    margin: -6% 0 0 9%;
+    object-fit: cover;
 }
 
 .organizational-issues {
@@ -738,7 +806,7 @@ body.lock {
     flex-direction: row;
     background-color: var(--main-dark-grey);
     color: var(--background);
-    margin-top: 115px;
+    margin-top: 136px;
     min-height: 723px;
 }
 
@@ -750,10 +818,17 @@ body.lock {
 .organizational-issues-text p {
     margin-left: 65px;
     text-align: start;
+    letter-spacing: -0.01em;
+    font-weight: 200;
 }
 
 .organizational-issues-text ul {
-    margin-left: 82px;
+    margin: -20px 0 0 82px;
+    font-weight: 200;
+}
+
+.organizational-issues-text ul li {
+    letter-spacing: -0.01em;
 }
 
 .organizational-issues-text ul li::before {
@@ -774,7 +849,7 @@ body.lock {
     padding: 100px 34px 0 0px;
     display: flex;
     flex-direction: column;
-    gap: 52px;
+    gap: 60px;
     width: 64%;
 }
 
@@ -789,6 +864,7 @@ body.lock {
 }
 
 .wedding-services {
+    margin: -27px 0 0 0;
     width: 95%;
     display: flex;
     flex-direction: row;
@@ -796,6 +872,7 @@ body.lock {
 
 .wedding a {
     width: 45%;
+    margin-top: -19px;
 }
 
 .wedding button {
@@ -809,15 +886,28 @@ body.lock {
 }
 
 .wedding-service {
+    padding: 0 0px 0 13px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
     justify-content: start;
     padding-top: 28px;
+    
+}
+
+.wedding-service p {
+    font-weight: 300;
 }
 
 .wedding-service ul {
     margin-left: 0;
+    font-weight: 300;
+    margin: 0 0 0 -15px;
+}
+
+.wedding-service ul li {
+    width: 90%;
+    letter-spacing: -0.01em;
 }
 
 .wedding-slides {
@@ -898,8 +988,8 @@ body.lock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 198px 0 0 0;
-    gap: 110px;
+    margin: 210px 0 0 0;
+    gap: 113px;
     padding: 0 40px;
 }
 
@@ -911,13 +1001,14 @@ body.lock {
     letter-spacing: 0.2px;
     display: flex;
     text-align: center;
+    font-weight: 500;
 }
 
 .contacts-form-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .form-container {
@@ -926,7 +1017,7 @@ body.lock {
 }
 
 .contacts-form-info {
-    width: 38%;
+    width: 39%;
     display: flex;
     flex-direction: column;
     gap: 63px;
@@ -938,6 +1029,7 @@ body.lock {
     line-height: 130%;
     letter-spacing: -0.1px;
     color: var(--main-black);
+    font-weight: 400;
 }
 
 .contacts-form-info-media-links {
@@ -991,7 +1083,7 @@ body.lock {
 form {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
 }
 
 label {
@@ -1006,14 +1098,15 @@ label {
 input,
 select,
 textarea {
-    width: 100%;
-    padding: 10px;
+    width: 99%;
+    padding: 10px 20px;
     background-color: var(--background);
     border: none;
     border-bottom: 1px solid var(--dark-grey);
 }
 
 select {
+    padding: 10px 20px;
     color: var(--default-grey);
     font-family: "Inter Tight", serif;
     font-size: 16px;
@@ -1028,7 +1121,7 @@ select::placeholder {
     font-family: "Inter Tight", serif;
     font-size: 16px;
     line-height: 120%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 input:focus,
@@ -1049,8 +1142,8 @@ select:focus {
     background-color: var(--main-dark-grey);
     display: flex;
     flex-direction: row;
-    margin: 160px 0 0 0;
-    padding: 72px 63px;
+    margin: 164px 0 0 0;
+    padding: 58px 63px;
     justify-content: space-between;
 }
 
@@ -1071,10 +1164,11 @@ select:focus {
     align-items: end;
     color: var(--main-grey);
     gap: 10px;
+    font-weight: 300;
 }
 
 .footer-content-contacts .footer-notes {
-    margin-top: 58px;
+    margin-top: 72px;
 }
 
 .footer-content-contacts a {
@@ -1089,13 +1183,13 @@ select:focus {
 
 .contacts-tel {
     font-family: "Inter Tight", serif;
-    font-size: 28px;
-    letter-spacing: -0.2px;
+    font-size: 24px;
+    letter-spacing: -0.02em;
     line-height: 100%;
 }
 
 .contacts-email {
-    font-family: "Inter Tight Regular", serif;
+    font-family: "Inter Tight", serif;
     font-size: 24px;
     line-height: 130%;
     letter-spacing: 0.5px;
@@ -1110,19 +1204,20 @@ select:focus {
 
 .media-icons {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer-notes {
-    font-family: "Inter Regular", serif;
+    font-family: "Inter", serif;
     font-size: 18px;
     line-height: 130%;
-    letter-spacing: 1.8px;
+    letter-spacing: 0.01em;
     color: var(--main-grey);
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 1050px) {
@@ -1211,6 +1306,10 @@ select:focus {
         letter-spacing: 0.2px;
     }
 
+    .quote p {
+        width: 58%;
+    }
+
     .quote-open {
         width: 42px;
         height: 48px;
@@ -1255,8 +1354,10 @@ select:focus {
         text-align: center;
     }
 
-    .about-title img {
-        margin: -8px 0 43px -45px;
+    .about-title-star {
+        position: absolute;
+        left: 89%;
+        top: -1%;
     }
 
     .avatar {
