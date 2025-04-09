@@ -7,12 +7,13 @@
     --default-grey: rgba(123, 123, 123, 1);
     --white: rgba(254, 254, 254, 1);
     --error: rgba(181, 14, 14, 1);
-    /* outline: 4px solid green !important; */
+    outline: 4px solid green !important;
 }
 
 [data-key] {
     white-space: pre-line;
 }
+
 
 @font-face {
     font-family: "IvyOra";
@@ -497,12 +498,12 @@ body.lock {
 
 .about-title-star {
     position: absolute;
-    left: 77%;
-    top: 7%;
+    left: 79%;
+    top: 28%;
 }
 
 [lang="ua"] .about-title-star {
-    left: 54%;
+    left: 71%;
 }
 
 .about-text {
@@ -1364,12 +1365,12 @@ select:focus {
 
     .about-title-star {
         position: absolute;
-        left: 89%;
-        top: -1%;
+        left: 85%;
+        top: 2%;
     }
 
     [lang="ua"] .about-title-star {
-        left: 85%;
+        left: 78%;
         top: 41px;
     }
 
@@ -1491,6 +1492,10 @@ select:focus {
     .service-express {
         flex-direction: column-reverse;
         padding: 0;
+    }
+
+    .service-express ul {
+        margin-left: 0;
     }
 
     .organizational-issues {
