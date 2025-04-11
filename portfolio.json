@@ -1,0 +1,227 @@
+[
+    {
+        "src": "./assets/portfolio-photo-1.jpg",
+        "alt": "portfolio-photo-1",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-2.jpg",
+        "alt": "portfolio-photo-2",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-3.jpg",
+        "alt": "portfolio-photo-3",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-4.jpg",
+        "alt": "portfolio-photo-4",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-5.jpg",
+        "alt": "portfolio-photo-5",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-6.jpg",
+        "alt": "portfolio-photo-6",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-7.jpg",
+        "alt": "portfolio-photo-7",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-8.jpg",
+        "alt": "portfolio-photo-8",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-9.jpg",
+        "alt": "portfolio-photo-9",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-10.jpg",
+        "alt": "portfolio-photo-10",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-11.jpg",
+        "alt": "portfolio-photo-11",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-12.jpg",
+        "alt": "portfolio-photo-12",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-13.jpg",
+        "alt": "portfolio-photo-13",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-14.jpg",
+        "alt": "portfolio-photo-14",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-15.jpg",
+        "alt": "portfolio-photo-15",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-16.jpg",
+        "alt": "portfolio-photo-16",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-17.jpg",
+        "alt": "portfolio-photo-17",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-18.jpg",
+        "alt": "portfolio-photo-18",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-19.jpg",
+        "alt": "portfolio-photo-19",
+        "category": "family"
+    },
+    {
+        "src": "./assets/portfolio-photo-20.jpg",
+        "alt": "portfolio-photo-20",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-21.jpg",
+        "alt": "portfolio-photo-21",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-22.jpg",
+        "alt": "portfolio-photo-22",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-23.jpg",
+        "alt": "portfolio-photo-23",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-24.jpg",
+        "alt": "portfolio-photo-24",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-25.jpg",
+        "alt": "portfolio-photo-25",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-26.jpg",
+        "alt": "portfolio-photo-26",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-27.jpg",
+        "alt": "portfolio-photo-27",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-28.jpg",
+        "alt": "portfolio-photo-28",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-29.jpg",
+        "alt": "portfolio-photo-29",
+        "category": "personal"
+    },
+    {
+        "src": "./assets/portfolio-photo-30.jpg",
+        "alt": "portfolio-photo-30",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-31.jpg",
+        "alt": "portfolio-photo-31",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-32.jpg",
+        "alt": "portfolio-photo-32",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-33.jpg",
+        "alt": "portfolio-photo-33",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-34.jpg",
+        "alt": "portfolio-photo-34",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-35.jpg",
+        "alt": "portfolio-photo-35",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-36.jpg",
+        "alt": "portfolio-photo-36",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-37.jpg",
+        "alt": "portfolio-photo-37",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-38.jpg",
+        "alt": "portfolio-photo-38",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-39.jpg",
+        "alt": "portfolio-photo-39",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-40.jpg",
+        "alt": "portfolio-photo-40",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-41.jpg",
+        "alt": "portfolio-photo-41",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-42.jpg",
+        "alt": "portfolio-photo-42",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-43.jpg",
+        "alt": "portfolio-photo-43",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-44.jpg",
+        "alt": "portfolio-photo-44",
+        "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-45.jpg",
+        "alt": "portfolio-photo-45",
+        "category": "love"
+    }
+]
