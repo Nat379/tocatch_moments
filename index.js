@@ -35,18 +35,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".open-menu-lang-toggle").addEventListener("click", () => {
       toggleMenu();
-    });
+  });
+  
   // slider
-  const galleryThumbs = new Swiper(".gallery-thumbs", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    freeMode: true,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  let galleryThumbs;
+
+  fetch("./portfolio.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const swiperWrapper = document.querySelector(
+        ".gallery-thumbs .swiper-wrapper"
+      );
+
+      // add slides
+      data.forEach((item) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.dataset.category = item.category;
+        slide.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+        swiperWrapper.appendChild(slide);
+      });
+
+      // slider initialization
+      galleryThumbs = new Swiper(".gallery-thumbs", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+        speed: 5000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+      });
+  
+      const navLinks = document.querySelectorAll(".portfolio-nav-link");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const selectedCategory = link.dataset.category;
+
+          // Перемикаємо класи
+          navLinks.forEach((l) => {
+            l.classList.remove("active", "portfolio-nav-link-active");
+          });
+          link.classList.add("active", "portfolio-nav-link-active");
+
+          // Фільтруємо слайди
+          const slides = document.querySelectorAll(".swiper-slide");
+
+          slides.forEach((slide) => {
+            const slideCategory = slide.dataset.category;
+            if (slideCategory === selectedCategory) {
+              slide.style.display = "flex";
+            } else {
+              slide.style.display = "none";
+            }
+          });
+
+          galleryThumbs.update(); // оновлюємо слайдер
+        });
+      });
   });
 
   // submit form

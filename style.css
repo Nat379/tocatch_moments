@@ -42,7 +42,8 @@ body {
 }
 
 body.lock {
-    position: fixed;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .overlay {
@@ -574,6 +575,7 @@ body.lock {
     flex-shrink: 0;
     position: relative;
     gap: 20px;
+    transition-timing-function: linear !important;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
@@ -631,6 +633,10 @@ body.lock {
     line-height: 100%;
     letter-spacing: -0.02em;
     cursor: pointer;
+}
+
+.portfolio-nav-link-active {
+    font-weight: 400 !important;
 }
 
 .decor-horizontal-scroll {
@@ -1256,6 +1262,7 @@ select:focus {
     }
 
     .header {
+        width: 100%;
         padding: 63px 20px 0 20px;
     }
 
