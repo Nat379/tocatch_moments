@@ -665,7 +665,7 @@ body.lock {
     align-items: center;
 }
 
-@keyframes scroll-left {
+/* @keyframes scroll-left {
     from {
         transform: translateX(0);
     }
@@ -673,7 +673,7 @@ body.lock {
     to {
         transform: translateX(-100%);
     }
-}
+} */
 
 .services {
     align-items: center;

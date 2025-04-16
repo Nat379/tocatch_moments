@@ -47,12 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
         ".gallery-thumbs .swiper-wrapper"
       );
 
-      // add slides
       data.forEach((item) => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.dataset.category = item.category;
-        slide.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+
+        // base file name
+        const baseName = item.src.replace(/\.\w+$/, "");
+
+        slide.innerHTML = `
+        <picture>
+          <source srcset="${baseName}.webp" type="image/webp">
+          <img src="${item.src}" alt="${item.alt}" loading="lazy" width="301px" height="463px">
+        </picture>
+      `;
+
         swiperWrapper.appendChild(slide);
       });
 
@@ -69,20 +78,20 @@ document.addEventListener("DOMContentLoaded", () => {
           disableOnInteraction: false,
         },
       });
-  
+
       const navLinks = document.querySelectorAll(".portfolio-nav-link");
 
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           const selectedCategory = link.dataset.category;
 
-          // Перемикаємо класи
+          // change classes
           navLinks.forEach((l) => {
             l.classList.remove("active", "portfolio-nav-link-active");
           });
           link.classList.add("active", "portfolio-nav-link-active");
 
-          // Фільтруємо слайди
+          // filter slides
           const slides = document.querySelectorAll(".swiper-slide");
 
           slides.forEach((slide) => {
@@ -94,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
 
-          galleryThumbs.update(); // оновлюємо слайдер
+          galleryThumbs.update();
         });
       });
-  });
+    });
 
   // submit form
   let submitted = false;
