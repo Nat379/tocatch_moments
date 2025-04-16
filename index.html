@@ -61,18 +61,69 @@
                 <div class="scroll-container">
                     <div class="carousel-wrapper">
                         <div class="carousel">
-                            <div><img src="./assets/scroll-photo-1.jpg" alt="Photo 1"></div>
-                            <div><img src="./assets/scroll-photo-2.jpg" alt="Photo 2"></div>
-                            <div><img src="./assets/scroll-photo-3.jpg" alt="Photo 3"></div>
-                            <div><img src="./assets/scroll-photo-4.jpg" alt="Photo 4"></div>
-                            <div><img src="./assets/scroll-photo-5.jpg" alt="Photo 5"></div>
-                            <div><img src="./assets/scroll-photo-6.jpg" alt="Photo 6"></div>
-                            <div><img src="./assets/scroll-photo-7.jpg" alt="Photo 7"></div>
-                            <div><img src="./assets/scroll-photo-8.jpg" alt="Photo 8"></div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-1.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-1.jpg" alt="Photo 1" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-2.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-2.jpg" alt="Photo 2" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-3.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-3.jpg" alt="Photo 3" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-4.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-4.jpg" alt="Photo 4" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-5.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-5.jpg" alt="Photo 5" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-6.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-6.jpg" alt="Photo 6" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-7.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-7.jpg" alt="Photo 7" width="600" height="400">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-8.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-8.jpg" alt="Photo 8" width="600" height="400">
+                                </picture>
+                            </div>
                         </div>
+
                         <div class="carousel-mobile">
-                            <div><img src="./assets/scroll-photo-mobile-1.jpg" alt="Photo 1"></div>
-                            <div><img src="./assets/scroll-photo-mobile-2.jpg" alt="Photo 2"></div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-1.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-1.jpg" alt="Photo 1" loading="lazy">
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcset="./assets/scroll-photo-2.webp" type="image/webp">
+                                    <img src="./assets/scroll-photo-2.jpg" alt="Photo 2" loading="lazy">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,10 +151,16 @@
             <img class="quote-close" src="./assets/quote-icon.png" alt="quote-close" width="82" height="62">
         </div>
         <section class="fade-in about" id="about">
-            <img class="avatar" src="./assets/avatar.png" alt="photo" width="454" height="642">
+            <picture>
+                <source srcset="./assets/avatar.webp" type="image/webp">
+                <img class="avatar" src="./assets/avatar.png" alt="photo" width="454" height="642" loading="lazy">
+            </picture>
             <div class="about-text-content">
                 <h2 class="about-title" data-key="about-title" >Hi everyone!</h2><img class="about-title-star" src="./assets/star.png" alt="star" width="39">
-                <img class="avatar-mobile" src="./assets/avatar-mobile.jpg" alt="avatar" width="335" height="408">
+                <picture>
+                    <source srcset="./assets/avatar-mobile.webp" type="image/webp">
+                    <img class="avatar-mobile" src="./assets/avatar-mobile.jpg" alt="avatar" width="335" height="408" loading="lazy">
+                </picture>
                 <p class="about-text" data-key="about-text-1" >I have a great chance to share a piece of my soul with you. So, you are on
                     this site. </p>
                 <p class="about-text" data-key="about-text-2" >Photography is not just a job for me.
@@ -124,7 +181,7 @@
                 <li class="portfolio-nav-link" data-category="personal">Personal</li>
                 <li class="portfolio-nav-link" data-category="love">Love story</li>
                 <li class="portfolio-nav-link" data-category="family">Family</li>
-                <li class="portfolio-nav-link" data-category="wedding">Wedding</li>
+                <li class="portfolio-nav-link" data-category="wedding">Weddings</li>
             </ul>
         </section>
 
@@ -154,8 +211,13 @@
         <section class="services fade-in" id="services">
             <h2 class="portfolio-title">SERVICES</h2>
             <div class="service-block fade-in">
-                <div><img src="./assets/services-photo-1.jpg" alt="family photo" class="service-personal-photo"
-                        width="533" height="540"></div>
+                <div>
+                    <picture>
+                        <source srcset="./assets/services-photo-1.webp" type="image/webp">
+                        <img src="./assets/services-photo-1.jpg" alt="family photo" class="service-personal-photo" width="533"
+                            height="540" loading="lazy">
+                    </picture>
+                </div>
                 <div class="service-info fade-in">
                     <h3 class="service-title" data-key="service-title-personal">personal / love story / Family*
                         photoshoot</h3>
@@ -190,8 +252,13 @@
                     </ul>
                     <a class="link-button" href="#form"><button class="button">BOOK A SHOOTING</button></a>
                 </div>
-                <div><img src="./assets/services-photo-2.jpg" class="service-express-photo" alt="express photo"
-                        width="533" height="540"></div>
+                <div>
+                    <picture>
+                        <source srcset="./assets/services-photo-2.webp" type="image/webp">
+                        <img src="./assets/services-photo-2.jpg" class="service-express-photo" alt="express photo" width="533"
+                            height="540" loading="lazy">
+                    </picture>
+                </div>
             </div>
         </section>
 
@@ -214,7 +281,10 @@
                 </ul>
             </div>
             <div class="organizational-issues-img">
-                <img src="./assets/organizational-issues-img.jpg" alt="photo">
+                <picture>
+                    <source srcset="./assets/organizational-issues-img.webp" type="image/webp">
+                    <img src="./assets/organizational-issues-img.jpg" alt="photo" loading="lazy">
+                </picture>
             </div>
         </div>
         <div class="wedding fade-in">
