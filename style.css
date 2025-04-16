@@ -964,6 +964,30 @@ body.lock {
     animation-delay: 20s;
 }
 
+.black-white-wedding-slide .bw-4 {
+    animation-delay: 30s;
+}
+
+.black-white-wedding-slide .bw-5 {
+    animation-delay: 40s;
+}
+
+.black-white-wedding-slide .bw-7 {
+    animation-delay: 50s;
+}
+
+.black-white-wedding-slide .bw-8 {
+    animation-delay: 60s;
+}
+
+.black-white-wedding-slide .bw-9 {
+    animation-delay: 70s;
+}
+
+.black-white-wedding-slide .bw-10 {
+    animation-delay: 80s;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
