@@ -223,5 +223,70 @@
         "src": "./assets/portfolio-photo-45.jpg",
         "alt": "portfolio-photo-45",
         "category": "love"
+    },
+    {
+        "src": "./assets/portfolio-photo-46.jpg",
+        "alt": "portfolio-photo-46",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-47.jpg",
+        "alt": "portfolio-photo-47",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-48.jpg",
+        "alt": "portfolio-photo-48",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-49.jpg",
+        "alt": "portfolio-photo-49",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-50.jpg",
+        "alt": "portfolio-photo-50",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-51.jpg",
+        "alt": "portfolio-photo-51",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-52.jpg",
+        "alt": "portfolio-photo-52",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-53.jpg",
+        "alt": "portfolio-photo-53",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-54.jpg",
+        "alt": "portfolio-photo-54",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-55.jpg",
+        "alt": "portfolio-photo-55",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-56.jpg",
+        "alt": "portfolio-photo-56",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-57.jpg",
+        "alt": "portfolio-photo-57",
+        "category": "wedding"
+    },
+    {
+        "src": "./assets/portfolio-photo-58.jpg",
+        "alt": "portfolio-photo-58",
+        "category": "wedding"
     }
 ]
