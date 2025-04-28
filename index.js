@@ -33,10 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", toggleMenu);
   });
 
-  document.querySelector(".open-menu-lang-toggle").addEventListener("click", () => {
+  document
+    .querySelector(".open-menu-lang-toggle")
+    .addEventListener("click", () => {
       toggleMenu();
-  });
-  
+    });
+
   // slider
   let galleryThumbs;
 
@@ -47,25 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
         ".gallery-thumbs .swiper-wrapper"
       );
 
+      // Створення фрагмента для слайдів
+      const fragment = document.createDocumentFragment();
+
       data.forEach((item) => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.dataset.category = item.category;
 
-        // base file name
         const baseName = item.src.replace(/\.\w+$/, "");
 
         slide.innerHTML = `
         <picture>
           <source srcset="${baseName}.webp" type="image/webp">
-          <img src="${item.src}" alt="${item.alt}" loading="lazy" width="301px" height="463px">
+          <img src="${item.src}" alt="${item.alt}" loading="lazy" width="301" height="463">
         </picture>
       `;
 
-        swiperWrapper.appendChild(slide);
+        // Додаємо слайд до фрагменту
+        fragment.appendChild(slide);
       });
 
-      // slider initialization
+      // Додаємо всі слайди у DOM за один раз
+      swiperWrapper.appendChild(fragment);
+
+      // ініціалізація слайдера
       galleryThumbs = new Swiper(".gallery-thumbs", {
         loop: true,
         spaceBetween: 20,
@@ -81,28 +89,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const navLinks = document.querySelectorAll(".portfolio-nav-link");
 
+      // Обробник для фільтрації слайдів
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           const selectedCategory = link.dataset.category;
 
-          // change classes
+          // Зміна активного класу
           navLinks.forEach((l) => {
             l.classList.remove("active", "portfolio-nav-link-active");
           });
           link.classList.add("active", "portfolio-nav-link-active");
 
-          // filter slides
+          // Фільтруємо слайди за категорією
           const slides = document.querySelectorAll(".swiper-slide");
 
           slides.forEach((slide) => {
-            const slideCategory = slide.dataset.category;
-            if (slideCategory === selectedCategory) {
-              slide.style.display = "flex";
-            } else {
-              slide.style.display = "none";
-            }
+            // Використовуємо клас hidden для фільтрації
+            slide.classList.toggle(
+              "hidden",
+              slide.dataset.category !== selectedCategory
+            );
           });
 
+          // Оновлюємо Swiper після фільтрації
           galleryThumbs.update();
         });
       });

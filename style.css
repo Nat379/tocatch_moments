@@ -46,6 +46,10 @@ body.lock {
     overflow: hidden;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -729,7 +733,7 @@ body.lock {
     color: var(--main-black);
 }
 
-.custom-list {
+.custom-list, .service-info-title, .service-info-express-title {
     list-style: none;
     font-family: "Inter Tight", serif;
     font-size: 18px;
@@ -739,6 +743,16 @@ body.lock {
     gap: 21px;
     margin-left: 42px;
     font-weight: 400;
+}
+
+.service-info-title {
+    width: 78%;
+    margin-left: 26px;
+}
+
+.service-info-express-title {
+    width: 78%;
+    margin-left: -13px;
 }
 
 .custom-list-express {
@@ -866,7 +880,7 @@ body.lock {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 213px;
+    margin-top: 195px;
     gap: 90px
 }
 
@@ -904,6 +918,13 @@ body.lock {
 
 .wedding-service p {
     font-weight: 300;
+}
+
+.wedding-service-title {
+    margin: 0 0 0 23px;
+    font-size: 18px;
+    font-family: "Inter";
+    line-height: 130%;
 }
 
 .wedding-service ul {

@@ -4,26 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preload" as="image" href="./assets/logo.webp">
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+
     <link rel="stylesheet" href="./style.css">
+
     <title>to catch moments</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="logo"><img src="./assets/logo.png" alt="logo" width="186" height="13"></div>
+        <div class="logo">
+            <picture>
+                <source srcset="./assets/logo.webp" type="image/webp">
+                <img src="./assets/logo.png" alt="logo" width="186" height="13">
+            </picture>
+        </div>
         <nav class="navigation">
             <ul class="nav-list">
                 <li class="nav-link"><a href="#about">About me</a></li>
@@ -188,22 +196,22 @@
         <div class="decor-horizontal-scroll">
             <div class="decor-carousel-wrapper">
                 <div class="carousel-content">
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="30" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="30" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="30" loading="lazy"></span>
                 </div>
             </div>
             <div class="decor-carousel-wrapper">
                 <div class="carousel-content">
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
-                    <span><img src="./assets/star.png" alt="star" width="50" loading="lazy"></span>
-                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="34" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="34" loading="lazy"></span>
+                    <span><img src="./assets/star.png" alt="star" width="50" height="50" loading="lazy"></span>
+                    <span><img src="./assets/logo-uppercase.png" alt="logo" width="389" height="30" loading="lazy"></span>
                 </div>
             </div>
         </div>
@@ -222,8 +230,8 @@
                     <h3 class="service-title" data-key="service-title-personal">personal / love story / Family*
                         photoshoot</h3>
                     <p class="service-price">1800 DDK (240 €)</p>
+                    <p data-key="service-custom-list-personal" class="service-info-title">The price includes:</p>
                     <ul class="custom-list">
-                        <p data-key="service-custom-list-personal">The price includes:</p>
                         <li data-key="service-custom-list-personal-1">1-1.5 hours of shooting, +/- up to 150 editing photos;</li>
                         <li data-key="service-custom-list-personal-2">Selection of location, image, ideas, help with posing;</li>
                         <li data-key="service-custom-list-personal-3">Ready photos from 5 to 14 days (depending on the workload);</li>
@@ -241,8 +249,8 @@
                 <div class="service-info fade-in">
                     <h3 class="service-title" data-key="service-title-express">Express photoshoot</h3>
                     <p class="service-price">1000 DDK</p>
+                    <p data-key="service-custom-list-express" class="service-info-express-title">The price includes:</p>
                     <ul class="service-custom-list-express custom-list">
-                        <p data-key="service-custom-list-express">The price includes:</p>
                         <li data-key="service-custom-list-express-1">30-40 minutes of shooting, +/- up to 50 editing photos;</li>
                         <li data-key="service-custom-list-express-2">Selection of location, image, ideas, help with posing;</li>
                         <li data-key="service-custom-list-express-3">Ready photos from 5 to 14 days (depending on the workload);</li>
@@ -293,8 +301,8 @@
                 <div class="wedding-service fade-in">
                     <h3 class="service-title" data-key="wedding-title-minimum">minimum</h3>
                     <p class="service-price">2625 DDK (350 €)</p>
+                    <p data-key="wedding-title" class="wedding-service-title">The price includes:</p>
                     <ul class="custom-list">
-                        <p data-key="wedding-title">The price includes:</p>
                         <li data-key="wedding-minimum-1">1-1.5 hours of shooting, +/- up to 150 editing photos;</li>
                         <li data-key="wedding-minimum-2">Selection of location, image, ideas, help with posing;</li>
                         <li data-key="wedding-minimum-3">Ready photos from 5 to 14 days (depending on the workload);</li>
@@ -309,8 +317,8 @@
                 <div class="wedding-service fade-in">
                     <h3 class="service-title" data-key="wedding-title-standart">Standart</h3>
                     <p class="service-price">3375 DDK (450 €)</p>
+                    <p data-key="wedding-title" class="wedding-service-title">The price includes:</p>
                     <ul class="custom-list">
-                        <p data-key="wedding-title">The price includes:</p>
                         <li data-key="wedding-standart-1">2-2.5 hours of shooting, +/- up to 300 editing photos;</li>
                         <li data-key="wedding-standart-2">Selection of location, image, ideas, help with posing;</li>
                         <li data-key="wedding-standart-3">Ready photos from 5 to 21 days (depending on the workload);</li>
@@ -326,8 +334,8 @@
                 <div class="wedding-service fade-in">
                     <h3 class="service-title" data-key="wedding-title-premium">Premium</h3>
                     <p class="service-price">5250 DDK (700 €)</p>
+                    <p data-key="wedding-title" class="wedding-service-title">The price includes:</p>
                     <ul class="custom-list">
-                        <p data-key="wedding-title">The price includes:</p>
                         <li data-key="wedding-premium-1">3.5-4 hours of shooting, +/- up to 500 editing photos;</li>
                         <li data-key="wedding-premium-2">Selection of location, image, ideas, help with posing;</li>
                         <li data-key="wedding-premium-3">Ready photos from 1 months (depending on the workload);</li>
@@ -436,7 +444,7 @@
                     </picture> -->
                 </div>
             </div>
-
+        </div>
         <section id="form" class="contacts-form fade-in">
             <h2 class="contacts-form-title">GET IN TOUCH</h2>
             <div class="contacts-form-content">
@@ -447,10 +455,10 @@
                     <div class="contacts-form-info-media-links">
                         <span class="media-link"><a
                                 href="https://www.facebook.com/share/1BPVjo8v3n/?mibextid=wwXIfr">FACEBOOK <img
-                                    src="./assets/arrow-link.png" alt="arrow" width="24"></a></span>
+                                    src="./assets/arrow-link.png" alt="arrow" width="24" height="24"></a></span>
                         <span class="media-link"><a
                                 href="https://www.instagram.com/tocatch.moments?igsh=YzJnMWU4NmRkNDVp">INSTAGRAM <img
-                                    src="./assets/arrow-link.png" alt="arrow" width="24"></a></span>
+                                    src="./assets/arrow-link.png" alt="arrow" width="24" height="24"></a></span>
                     </div>
                 </div>
                 <div class="form-container">
@@ -522,9 +530,9 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./index.js"></script>
-    <script src="./lang-toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="./lang-toggle.js" defer></script>
 </body>
 
 </html>
