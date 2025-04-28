@@ -1302,10 +1302,6 @@ select:focus {
         line-height: 100%;
     }
 
-    .scroll-container {
-        height: 290px;
-    }
-
     .main-title {
         padding: 52px 20px 0 20px;
         gap: 13px;
@@ -1358,26 +1354,6 @@ select:focus {
         width: 42px;
         margin-top: 94px;
         height: 48px;
-    }
-
-    .carousel {
-        display: none;
-    }
-
-    .carousel-mobile {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .carousel-mobile div {
-        object-fit: cover;
-        height: 243px;
-    }
-
-    .carousel-mobile div img {
-        height: 243px;
     }
 
     .about {
@@ -1715,5 +1691,36 @@ select:focus {
         font-size: 16px;
         font-family: "Inter", serif;
         font-weight: 50;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .carousel {
+            display: none;
+        }
+
+    .carousel-wrapper {
+        width: 100%;
+    }
+    
+    .scroll-container {
+        width: 100%;
+        height: 290px;
+    }
+
+    .carousel-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .carousel-mobile div {
+        object-fit: cover;
+        height: 243px;
+    }
+
+    .carousel-mobile div img {
+        height: 243px;
     }
 }
