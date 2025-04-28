@@ -798,7 +798,7 @@ body.lock {
     width: 74%;
 }
 
-.service-info button {
+.service-info .button {
     width: 100%;
 }
 
@@ -896,7 +896,7 @@ body.lock {
     margin-top: -19px;
 }
 
-.wedding button {
+.wedding .button {
     width: 100%;
 }
 
@@ -1517,7 +1517,7 @@ select:focus {
         width: 80%;
     }
 
-    .service-info button {
+    .service-info .button {
         width: 100%;
         margin: 0;
     }
@@ -1593,7 +1593,7 @@ select:focus {
         align-items: center;
     }
 
-    .wedding button {
+    .wedding .button {
         width: 95%;
     }
 
