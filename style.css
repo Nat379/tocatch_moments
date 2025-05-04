@@ -728,7 +728,7 @@ body.lock {
     font-family: "Inter Tight", serif;
     font-size: 20px;
     line-height: 130%;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     color: var(--main-black);
 }
@@ -742,12 +742,13 @@ body.lock {
     flex-direction: column;
     gap: 21px;
     margin-left: 42px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .service-info-title {
     width: 78%;
     margin-left: 26px;
+    font-weight: 300;
 }
 
 .service-info-express-title {
@@ -767,6 +768,7 @@ body.lock {
     margin-left: 26px;
     letter-spacing: 0;
     position: relative;
+    font-weight: 300;
 }
 
 .service-express ul {
@@ -1064,7 +1066,7 @@ body.lock {
     line-height: 130%;
     letter-spacing: -0.1px;
     color: var(--main-black);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .contacts-form-info-media-links {
@@ -1377,12 +1379,12 @@ select:focus {
     .about-title-star {
         position: absolute;
         left: 85%;
-        top: 2%;
+        top: -2%;
     }
 
     [lang="ua"] .about-title-star {
         left: 78%;
-        top: 41px;
+        top: 0;
     }
 
     .avatar {
@@ -1571,6 +1573,10 @@ select:focus {
     .wedding-service {
         align-items: center;
         width: 100%;
+    }
+
+    .wedding-service ul {
+        margin: 0;
     }
 
     .wedding .button {

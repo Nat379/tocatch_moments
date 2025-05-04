@@ -1,7 +1,7 @@
 const uaButtons = document.querySelectorAll(".ua-lang");
 const enButtons = document.querySelectorAll(".en-lang");
 
-// Функція встановлення мови
+// ser language
 function setLanguage(lang) {
   fetch(`./data-lang/${lang}.json`)
     .then((response) => {
@@ -15,13 +15,13 @@ function setLanguage(lang) {
         el.textContent = data[el.getAttribute("data-key")];
       });
 
-      // Оновлюємо локальне сховище
+      // local storage
       localStorage.setItem("language", lang);
 
-      // Оновлюємо атрибут lang у <html>
+      // update lang in <html>
       document.documentElement.setAttribute("lang", lang);
 
-      // Додаємо/видаляємо активний клас у кнопках мови
+      // toggle active class
       uaButtons.forEach((btn) =>
         btn.classList.toggle("inactive-lang", lang !== "ua")
       );
@@ -32,15 +32,15 @@ function setLanguage(lang) {
     .catch((error) => console.error("Error loading language file:", error));
 }
 
-// Отримуємо поточну мову або встановлюємо англійську за замовчуванням
+// default lang
 const defaultLang = localStorage.getItem("language") || "en";
 
-// Викликаємо функцію встановлення мови при завантаженні сторінки
+// set lang
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage(defaultLang);
 });
 
-// Обробники подій для перемикання мови
+// switch lang
 uaButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (localStorage.getItem("language") !== "ua") {
