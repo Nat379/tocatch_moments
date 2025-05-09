@@ -82,6 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
           delay: 0,
           disableOnInteraction: false,
         },
+        breakpoints: {
+          0: {
+            spaceBetween: 5,
+          },
+          768: {
+            spaceBetween: 20, 
+          },
+        },
       });
 
       const navLinks = document.querySelectorAll(".portfolio-nav-link");
