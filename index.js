@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       swiperWrapper.appendChild(fragment);
 
       galleryThumbs = new Swiper(".gallery-thumbs", {
-        loop: true,
+        loop: false,
         spaceBetween: 20,
         slidesPerView: "auto",
         freeMode: true,
