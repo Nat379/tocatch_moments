@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         breakpoints: {
           0: {
-            spaceBetween: 5,
+            spaceBetween: 10,
           },
           768: {
             spaceBetween: 20, 
