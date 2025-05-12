@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slide.innerHTML = `
           <picture>
             <source srcset="${baseName}.webp" type="image/webp">
-            <img src="${item.src}" alt="${item.alt}" width="301" height="463">
+            <img src="${item.src}" loading="lazy" alt="${item.alt}" width="301" height="463">
           </picture>
         `;
 
