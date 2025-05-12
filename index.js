@@ -1,3 +1,4 @@
+// Get DOM elements
 const backToTopButton = document.querySelector(".back-to-top-button");
 const year = document.getElementById("year");
 const mobileYear = document.getElementById("mobile-year");
@@ -7,6 +8,7 @@ const overlay = document.querySelector(".overlay");
 const body = document.body;
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Fade-in effect for elements using Intersection Observer
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -17,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-  // burger menu
+  // Burger menu toggle
   function toggleMenu() {
     burger.classList.toggle("active");
     menu.classList.toggle("active");
@@ -26,28 +28,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   burger.addEventListener("click", toggleMenu);
-
   overlay.addEventListener("click", toggleMenu);
-
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", toggleMenu);
   });
 
   document
     .querySelector(".open-menu-lang-toggle")
-    .addEventListener("click", () => {
-      toggleMenu();
-    });
+    .addEventListener("click", toggleMenu);
 
-  // slider
+  // Initialize slider
   let galleryThumbs;
 
   fetch("./portfolio.json")
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("portfolio.json not found");
+      }
+      return res.json();
+    })
     .then((data) => {
+      if (!data.length) {
+        console.warn("No portfolio data found.");
+        return;
+      }
+
       const swiperWrapper = document.querySelector(
         ".gallery-thumbs .swiper-wrapper"
       );
+
+      if (!swiperWrapper) {
+        console.error("Swiper wrapper not found in DOM.");
+        return;
+      }
 
       const fragment = document.createDocumentFragment();
 
@@ -59,18 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseName = item.src.replace(/\.\w+$/, "");
 
         slide.innerHTML = `
-        <picture>
-          <source srcset="${baseName}.webp" type="image/webp">
-          <img src="${item.src}" alt="${item.alt}" loading="lazy" width="301" height="463">
-        </picture>
-      `;
+          <picture>
+            <source srcset="${baseName}.webp" type="image/webp">
+            <img src="${item.src}" alt="${item.alt}" loading="lazy" width="301" height="463">
+          </picture>
+        `;
 
         fragment.appendChild(slide);
       });
 
-
       swiperWrapper.appendChild(fragment);
 
+      // Initialize Swiper after content is added
       galleryThumbs = new Swiper(".gallery-thumbs", {
         loop: false,
         spaceBetween: 20,
@@ -87,11 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
             spaceBetween: 10,
           },
           768: {
-            spaceBetween: 20, 
+            spaceBetween: 20,
           },
         },
       });
 
+      // Handle category filtering
       const navLinks = document.querySelectorAll(".portfolio-nav-link");
 
       navLinks.forEach((link) => {
@@ -112,33 +126,31 @@ document.addEventListener("DOMContentLoaded", () => {
             );
           });
 
-          galleryThumbs.update();
+          galleryThumbs.update(); // Refresh Swiper layout
         });
       });
+    })
+    .catch((err) => {
+      console.error("Error loading or processing portfolio data:", err);
     });
 
-  // submit form
-  let submitted = false;
-  window.onload = function () {
-    document.querySelector("form").addEventListener("submit", function (event) {
-      submitted = true;
-      setTimeout(function () {
-        if (submitted) {
-          alert("Your booking request has been sent successfully!");
-        }
-      }, 1000);
-    });
-  };
+  // Form submission alert
+  document.querySelector("form")?.addEventListener("submit", function (event) {
+    setTimeout(function () {
+      alert("Your booking request has been sent successfully!");
+    }, 1000);
+  });
 
-  // Back to top button
-  backToTopButton.addEventListener("click", () => {
+  // Back to top button scroll
+  backToTopButton?.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   });
 
-  // Year
-  year.textContent = new Date().getFullYear();
-  mobileYear.textContent = new Date().getFullYear();
+  // Display current year
+  const currentYear = new Date().getFullYear();
+  if (year) year.textContent = currentYear;
+  if (mobileYear) mobileYear.textContent = currentYear;
 });
