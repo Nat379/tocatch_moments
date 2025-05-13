@@ -72,10 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseName = item.src.replace(/\.\w+$/, "");
 
         slide.innerHTML = `
-          <picture>
+          <picture class="swiper-lazy">
             <source srcset="${baseName}.webp" type="image/webp">
-            <img src="${item.src}" loading="lazy" alt="${item.alt}" width="301" height="463">
+            <img src="${item.src}" class="swiper-lazy" alt="${item.alt}" width="301" height="463">
           </picture>
+           <div class="swiper-lazy-preloader"></div>
         `;
 
         fragment.appendChild(slide);
@@ -94,6 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
+        },
+        lazy: {
+          loadPrevNext: true,
+          loadOnTransitionStart: true,
         },
         breakpoints: {
           0: {
