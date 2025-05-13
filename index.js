@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slide.innerHTML = `
           <picture class="swiper-lazy">
             <source srcset="${baseName}.webp" type="image/webp">
-            <img src="${item.src}" class="swiper-lazy" alt="${item.alt}" width="301" height="463">
+            <img src="${item.src}" loading="lazy" class="swiper-lazy" alt="${item.alt}" width="301" height="463">
           </picture>
            <div class="swiper-lazy-preloader"></div>
         `;
