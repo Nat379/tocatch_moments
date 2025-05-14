@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseName = item.src.replace(/\.\w+$/, "");
 
         slide.innerHTML = `
-          <picture class="swiper-lazy">
+          <picture>
             <source srcset="${baseName}.webp" type="image/webp">
             <img src="${item.src}" loading="lazy" class="swiper-lazy" alt="${item.alt}" width="301" height="463">
           </picture>
@@ -97,8 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
           disableOnInteraction: false,
         },
         lazy: {
-          loadPrevNext: true,
           loadOnTransitionStart: true,
+          loadPrevNext: true,
+          loadPrevNextAmount: 4,
         },
         breakpoints: {
           0: {
@@ -109,6 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       });
+
+      galleryThumbs.on("lazyImageReady", () => {
+        galleryThumbs.update();
+      });
+
 
       // Handle category filtering
       const navLinks = document.querySelectorAll(".portfolio-nav-link");
