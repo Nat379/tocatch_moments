@@ -17,11 +17,11 @@
         rel="stylesheet">
     <link rel="preload" as="image" href="./assets/logo.webp">
 
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
+    <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    </noscript>
+    </noscript> -->
 
     <link rel="stylesheet" href="./style.css">
 
@@ -189,7 +189,7 @@
         <section class="portfolio fade-in" id="portfolio">
             <h2 class="portfolio-title">my portfolio</h2>
 
-            <div class="swiper gallery-thumbs">
+            <!-- <div class="swiper gallery-thumbs">
                 <div class="swiper-wrapper">
                 </div>
             </div>
@@ -199,7 +199,21 @@
                 <li class="portfolio-nav-link" data-category="love">Love story</li>
                 <li class="portfolio-nav-link" data-category="family">Family</li>
                 <li class="portfolio-nav-link" data-category="wedding">Weddings</li>
+            </ul> -->
+
+            <div class="portfolio-slider">
+                <div class="swiper gallery-thumbs">
+                    <div class="swiper-wrapper"></div>
+                </div>
+            </div>
+            
+            <ul class="portfolio-nav-list">
+                <li class="portfolio-nav-link" data-category="personal">Personal</li>
+                <li class="portfolio-nav-link" data-category="love">Love story</li>
+                <li class="portfolio-nav-link active" data-category="family">Family</li>
+                <li class="portfolio-nav-link" data-category="wedding">Weddings</li>
             </ul>
+
         </section>
 
         <div class="decor-horizontal-scroll">
@@ -495,7 +509,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
     <script src="./index.js" defer></script>
     <script src="./lang-toggle.js" defer></script>
 </body>
