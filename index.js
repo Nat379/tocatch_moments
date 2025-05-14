@@ -184,6 +184,14 @@ function renderSlides(data) {
       slide.className = "swiper-slide";
       slide.dataset.category = item.category;
 
+      const picture = document.createElement("picture");
+
+      const sourceWebp = document.createElement("source");
+      sourceWebp.type = "image/webp";
+      sourceWebp.dataset.srcset = item.src
+        .replace(/^\.\//, "")
+        .replace(/\.jpg$/, ".webp");
+
       const img = document.createElement("img");
       img.dataset.src = item.src.replace(/^\.\//, "");
       img.alt = item.alt;
@@ -191,7 +199,10 @@ function renderSlides(data) {
       img.height = 463;
       img.classList.add("lazy-img");
 
-      slide.appendChild(img);
+      picture.appendChild(sourceWebp);
+      picture.appendChild(img);
+      slide.appendChild(picture);
+
       fragment.appendChild(slide);
     });
   }
@@ -220,28 +231,41 @@ function setupCategoryFilter() {
 }
 
 function lazyLoadImages() {
-  const lazyImages = document.querySelectorAll("img.lazy-img");
+  const lazyImages = document.querySelectorAll(
+    "img.lazy-img, source[data-srcset]"
+  );
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove("lazy-img");
+
+          if (img.tagName === "IMG") {
+            img.src = img.dataset.src;
+            img.classList.remove("lazy-img");
+          } else if (img.tagName === "SOURCE") {
+            img.srcset = img.dataset.srcset;
+          }
+
           obs.unobserve(img);
         }
       });
     });
 
-    lazyImages.forEach((img) => observer.observe(img));
+    lazyImages.forEach((el) => observer.observe(el));
   } else {
-    lazyImages.forEach((img) => {
-      img.src = img.dataset.src;
-      img.classList.remove("lazy-img");
+    lazyImages.forEach((el) => {
+      if (el.tagName === "IMG") {
+        el.src = el.dataset.src;
+        el.classList.remove("lazy-img");
+      } else if (el.tagName === "SOURCE") {
+        el.srcset = el.dataset.srcset;
+      }
     });
   }
 }
+
 
 function startAutoScroll() {
   const wrapper = document.querySelector(".gallery-thumbs .swiper-wrapper");
