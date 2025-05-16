@@ -215,6 +215,8 @@ function setupCategoryFilter() {
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
+      if (link.classList.contains("active")) return;
+
       const category = link.dataset.category;
 
       links.forEach((l) => l.classList.remove("active"));
@@ -266,26 +268,34 @@ function lazyLoadImages() {
   }
 }
 
-
 function startAutoScroll() {
   const wrapper = document.querySelector(".gallery-thumbs .swiper-wrapper");
 
-  function animate() {
-    if (!isDragging) {
-      scrollOffset -= velocity;
+  cancelAnimationFrame(animationId);
+  let lastTime = performance.now();
 
-      const maxScroll = wrapper.scrollWidth / 2; // Ми дублюємо слайди двічі
+  function animate(currentTime) {
+    if (!isDragging) {
+      const deltaTime = (currentTime - lastTime) / 1000;
+      lastTime = currentTime;
+
+      const distance = velocity * deltaTime * 60;
+      scrollOffset -= distance;
+
+      const maxScroll = wrapper.scrollWidth / 2;
       if (Math.abs(scrollOffset) >= maxScroll) {
         scrollOffset = 0;
       }
 
       wrapper.style.transform = `translateX(${scrollOffset}px)`;
+    } else {
+      lastTime = currentTime;
     }
 
     animationId = requestAnimationFrame(animate);
   }
 
-  animate();
+  animationId = requestAnimationFrame(animate);
 }
 
 function enableDragScroll() {
@@ -310,7 +320,7 @@ function enableDragScroll() {
   function onPointerUp() {
     isDragging = false;
     wrapper.classList.remove("dragging");
-    startAutoScroll();
+    startAutoScroll(); 
   }
 
   wrapper.addEventListener("mousedown", onPointerDown);
@@ -321,8 +331,6 @@ function enableDragScroll() {
   wrapper.addEventListener("touchmove", onPointerMove);
   window.addEventListener("touchend", onPointerUp);
 }
-
-
 
 
   // Form submission alert
